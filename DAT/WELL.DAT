@@ -1,0 +1,81 @@
+// Well harvesting information
+//
+// (see farm.dat for the rules)
+//
+{ "ocean"
+   "normal"     "energy" "5" "@"
+   "city"       "energy" "5" "@"
+   "ice"        "energy" "5" "@"
+   "jungle"     "energy" "5" "@"
+   "barren"     "energy" "5" "@"
+}
+{ "grass"
+   "normal"     "energy" "1" "@"
+   "city"       "energy" "0" "@"
+   "ice"        "energy" "1" "@"
+   "jungle"     "energy" "1" "@"
+   "barren"     "energy" "1" "@"
+}
+{ "arid grass"
+   "normal"     "energy" "3" "@"
+   "city"       "energy" "0" "@"
+   "ice"        "energy" "3" "@"
+   "jungle"     "energy" "3" "@"
+   "barren"     "energy" "3" "@"
+}
+{ "desert"  
+   "normal"     "energy" "1" "@"
+   "city"       "energy" "0" "@"
+   "ice"        "energy" "1" "@"
+   "jungle"     "energy" "1" "@"
+   "barren"     "energy" "1" "@"
+}
+{ "ice"
+   "normal"     "energy" "1" "@"
+   "city"       "energy" "0" "@"
+   "ice"        "energy" "1" "@"
+   "jungle"     "energy" "1" "@"
+   "barren"     "energy" "1" "@"
+}
+{ "tundra"
+   "normal"     "energy" "3" "@"
+   "city"       "energy" "0" "@"
+   "ice"        "energy" "3" "@"
+   "jungle"     "energy" "3" "@"
+   "barren"     "energy" "3" "@"
+}
+{ "mountain"
+   "normal"     "energy" "0" "@"
+   "city"       "energy" "0" "@"
+   "ice"        "energy" "0" "@"
+   "jungle"     "energy" "0" "@"
+   "barren"     "energy" "0" "@"
+}
+{ "hill"
+   "normal"     "energy" "0" "@"
+   "city"       "energy" "0" "@"
+   "ice"        "energy" "0" "@"
+   "jungle"     "energy" "0" "@"
+   "barren"     "energy" "0" "@"
+}
+{ "tree"
+   "normal"     "energy" "3" "@"
+   "city"       "energy" "0" "@"
+   "ice"        "energy" "3" "@"
+   "jungle"     "energy" "3" "@"
+   "barren"     "energy" "3" "@"
+}
+{ "river"
+   "normal"     "energy" "5" "@"
+   "city"       "energy" "5" "@"
+   "ice"        "energy" "5" "@"
+   "jungle"     "energy" "5" "@"
+   "barren"     "energy" "5" "@"
+}
+{ "delta"
+   "normal"     "energy" "5" "@"
+   "city"       "energy" "5" "@"
+   "ice"        "energy" "5" "@"
+   "jungle"     "energy" "5" "@"
+   "barren"     "energy" "5" "@"
+}

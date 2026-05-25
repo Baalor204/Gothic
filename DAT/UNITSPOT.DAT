@@ -1,0 +1,171 @@
+// unit spotting chart
+//
+// Updated per change to camo / spotting algorithm for V1.52 patch
+//
+//   1. Choose base terrain that will provide 0 offset so that camo values in UNIT.DAT are the same:
+//      Normal Planet / Grass Base Tile
+//   2. Restrict max / min bonus beteween ±2 for most units, but allowing for a values outside this
+//      range for "edge" cases
+//   3. Due to restrictions, small offsets are used so that only edge cases for Foot units are +3:
+//      this is restricted to Jungle planets with:
+//      i. Mountain + Tree + Road + Structure on Grass, Desert, or Ice
+//     ii. Hill + Tree + Road + Structure on Desert or Ice
+//   4. For every structure, there is also a road tile, except for cities build on oceans so when
+//      considering camo in structures, roads and structures are added together.
+//      i. For structures on oceans, the ocean modifier for ground units is set to negate the structure's
+//         bonus so that no additional camouflage is given (Wells & Shields - see STRBUILD.DAT)
+//   5. For Naval and Underater units, delta subtracts 1 and river 2 from Naval (twice that for Underwater)
+//
+// V2015-02-21 (Matt): Added new Mech, Gate, and Underwater movement types
+//
+// names of terrains and tile set types MUST stay in the order below - note that desert is actually city
+// for each type of terrain, lists the tile set type and the spotting modifiers
+// for the movement types...foot, wheel, tread, air, naval, space, hover, jump,
+// crawler, lander, mech, gate, and underwater.
+//
+// Note that all values are read in as floats and multiple terrain types are added
+// together. There is also an additional modifier added to that camouflage value
+// (see rand_camo_min & rand_camo_max in EFS.INI under the [Camo] heading) and then
+// the final value is rounded up to the nearest integer (ceiling).
+//
+// Examples:
+//  1. Artillery Wheel unit is on a normal planet with grass as base tile, then trees,
+//     river, and then road. The Spotting is:
+//     Grass =  0.00
+//     Trees =  0.20
+//     River = -1.05
+//     Road =  -1.05
+//     Artillery Camo = 2
+//     Camouflage Rating = ( 0.0 + 0.2 + -1.05 + -1.05 ) + 2 = -1.9 + 2 = 0.1 (±2 random modifer)
+//     so -1.9 to 2.1 for -1 to 3 (rounded up). Display is (red) for values below 2
+//
+//  2. Submarine Underwater unit on ocean jungle planet 
+//     Ocean = 0.00
+//     Submarine Camo = 8
+//     Camouflage Rating = 8 + (±2 random modifer) so 6 to 10. Display is (green) from values above 8
+//
+//  3. Tracker Legion Foot unit is on jungle grass with trees and mountains
+//     Grass = 0.00
+//     Mountain = 0.30
+//     Tree = 0.40
+//     Tracker Legion Camo = 7
+//     Camouflage Rating = ( 0 + 0.3 + 0.4 ) + 7 = 0.7 + 7 = 7.7 (±2 random modifer) 
+//     so 5.7 to 9.7 for  6 to 10 (rounded up). Display is (green) for values > 7
+//              
+//  4. Hover Tank Hover unit on Desert (Actually City) Planet with Arid Grass with River
+//     Arid Grass = -0.15
+//     River = -1.0
+//     Hover Tank Camo = 2
+//     Camouflage Rating = ( -0.15 + -1.0 ) + 2 = -1.15 + 2 = 0.85 (±2 random modifer) 
+//     so -1.15 to 2.85 for -1 to 3 (rounded up). Display is (red) for values below 2
+//     
+//  5. Space Carrier on Desert (Actually City) Planet with Desert tile
+//     Desert = 0.0
+//     Space Carrier Camo = 1
+//     Camouflage Rating = 0.0 + 1 = 1 (±2 random modifer) 
+//     so -1 to 3. Display is (red) for values below 1
+//
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "ocean"                      
+        "normal"   "-2.00 -1.00 -1.00  0.00  0.00 -0.95 -1.00 -0.95 -0.95 -0.95 -2.00 -0.95  0.00"
+        "desert"   "-2.05 -1.05 -1.05  0.00  0.00 -1.00 -1.05 -1.00 -1.00 -1.00 -2.05 -1.00  0.00"
+        "ice"      "-2.10 -1.10 -1.10  0.00  0.00 -1.05 -1.10 -1.05 -1.05 -1.05 -2.10 -1.05  0.00"
+        "jungle"   "-2.15 -1.15 -1.15  0.00  0.00 -1.10 -1.15 -1.10 -1.10 -1.10 -2.15 -1.10  0.00"
+        "barren"   "-1.95 -0.95 -0.95  0.00  0.00 -0.90 -0.95 -0.90 -0.90 -0.90 -1.95 -0.90  0.00"
+}                     
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "grass"
+        "normal"   " 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00"
+        "desert"   " 0.05  0.00  0.00  0.00  0.00 -0.05  0.00 -0.05 -0.05 -0.05  0.05 -0.05  0.00"
+        "ice"      " 0.10  0.05  0.05  0.00  0.00  0.00  0.05  0.00  0.00  0.00  0.10  0.00  0.00"
+        "jungle"   " 0.15  0.10  0.10  0.00  0.00  0.05  0.10  0.05  0.05  0.05  0.15  0.05  0.00"
+        "barren"   "-0.05 -0.10 -0.10  0.00  0.00 -0.15 -0.10 -0.15 -0.15 -0.15 -0.05 -0.15  0.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "arid grass"
+        "normal"   "-0.10 -0.15 -0.15  0.00  0.00 -0.20 -0.15 -0.20 -0.20 -0.20 -0.10 -0.20  0.00"
+        "desert"   "-0.05 -0.10 -0.10  0.00  0.00 -0.15 -0.10 -0.15 -0.15 -0.15 -0.05 -0.15  0.00"
+        "ice"      " 0.00 -0.05 -0.05  0.00  0.00 -0.10 -0.05 -0.10 -0.10 -0.10  0.00 -0.10  0.00"
+        "jungle"   " 0.05  0.00  0.00  0.00  0.00 -0.05  0.00 -0.05 -0.05 -0.05  0.05 -0.05  0.00"
+        "barren"   "-0.15 -0.20 -0.20  0.00  0.00 -0.25 -0.20 -0.25 -0.25 -0.25 -0.15 -0.25  0.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "desert"
+        "normal"   " 0.05  0.00  0.00  0.00  0.00 -0.05  0.00 -0.05 -0.05 -0.05  0.05 -0.05  0.00"
+        "desert"   " 0.10  0.05  0.05  0.00  0.00  0.00  0.05  0.00  0.00  0.00  0.10  0.00  0.00"
+        "ice"      " 0.15  0.10  0.10  0.00  0.00  0.05  0.10  0.05  0.05  0.05  0.15  0.05  0.00"
+        "jungle"   " 0.20  0.15  0.15  0.00  0.00  0.10  0.15  0.10  0.10  0.10  0.20  0.10  0.00"
+        "barren"   " 0.00 -0.05 -0.05  0.00  0.00 -0.10 -0.05 -0.10 -0.10 -0.10  0.00 -0.10  0.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "ice"
+        "normal"   " 0.10  0.05  0.05  0.00  0.00  0.00  0.05  0.00  0.00  0.00  0.10  0.00  0.00"
+        "desert"   " 0.15  0.10  0.10  0.00  0.00  0.05  0.10  0.05  0.05  0.05  0.15  0.05  0.00"
+        "ice"      " 0.20  0.15  0.15  0.00  0.00  0.10  0.15  0.10  0.10  0.10  0.20  0.10  0.00"
+        "jungle"   " 0.25  0.20  0.20  0.00  0.00  0.15  0.20  0.15  0.15  0.15  0.25  0.15  0.00"
+        "barren"   " 0.05  0.00  0.00  0.00  0.00 -0.05  0.00 -0.05 -0.05 -0.05  0.05 -0.05  0.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "tundra"
+        "normal"   "-0.05 -0.10 -0.10  0.00  0.00 -0.15 -0.10 -0.15 -0.15 -0.15 -0.05 -0.15  0.00"
+        "desert"   " 0.00 -0.05 -0.05  0.00  0.00 -0.10 -0.05 -0.10 -0.10 -0.10  0.00 -0.10  0.00"
+        "ice"      " 0.05  0.00  0.00  0.00  0.00 -0.05  0.00 -0.05 -0.05 -0.05  0.05 -0.05  0.00"
+        "jungle"   " 0.10  0.05  0.05  0.00  0.00  0.00  0.05  0.00  0.00  0.00  0.10  0.00  0.00"
+        "barren"   "-0.10 -0.15 -0.15  0.00  0.00 -0.20 -0.15 -0.20 -0.20 -0.20 -0.10 -0.20  0.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "mountain"
+        "normal"   " 0.15  0.10  0.10  0.00  0.00  0.05  0.10  0.05  0.05  0.05  0.15  0.05  0.00"
+        "desert"   " 0.20  0.15  0.15  0.00  0.00  0.10  0.15  0.10  0.10  0.10  0.20  0.10  0.00"
+        "ice"      " 0.25  0.20  0.20  0.00  0.00  0.15  0.20  0.15  0.15  0.15  0.25  0.15  0.00"
+        "jungle"   " 0.30  0.25  0.25  0.00  0.00  0.20  0.25  0.20  0.20  0.20  0.30  0.20  0.00"
+        "barren"   " 0.10  0.05  0.05  0.00  0.00  0.00  0.05  0.00  0.00  0.00  0.10  0.00  0.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "hill"
+        "normal"   " 0.10  0.05  0.05  0.00  0.00  0.00  0.05  0.00  0.00  0.00  0.10  0.00  0.00"
+        "desert"   " 0.15  0.10  0.10  0.00  0.00  0.05  0.10  0.05  0.05  0.05  0.15  0.05  0.00"
+        "ice"      " 0.20  0.15  0.15  0.00  0.00  0.10  0.15  0.10  0.10  0.10  0.20  0.10  0.00"
+        "jungle"   " 0.25  0.20  0.20  0.00  0.00  0.15  0.20  0.15  0.15  0.15  0.25  0.15  0.00"
+        "barren"   " 0.05  0.00  0.00  0.00  0.00 -0.05  0.00 -0.05 -0.05 -0.05  0.05 -0.05  0.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "tree"
+        "normal"   " 0.20  0.15  0.15  0.00  0.00  0.10  0.15  0.10  0.10  0.10  0.20  0.10  0.00"
+        "desert"   " 0.25  0.20  0.20  0.00  0.00  0.15  0.20  0.15  0.15  0.15  0.25  0.15  0.00"
+        "ice"      " 0.30  0.25  0.25  0.00  0.00  0.20  0.25  0.20  0.20  0.20  0.30  0.20  0.00"
+        "jungle"   " 0.35  0.30  0.30  0.00  0.00  0.25  0.30  0.25  0.25  0.25  0.35  0.25  0.00"
+        "barren"   " 0.15  0.10  0.10  0.00  0.00  0.05  0.10  0.05  0.05  0.05  0.15  0.05  0.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "river"
+        "normal"   "-1.00 -1.05 -1.05  0.00 -2.00 -1.10 -1.05 -1.10 -1.10 -1.10 -1.00 -1.10 -4.00"
+        "desert"   "-0.95 -1.00 -1.00  0.00 -2.00 -1.05 -1.00 -1.05 -1.05 -1.05 -0.95 -1.05 -4.00"
+        "ice"      "-0.90 -0.95 -0.95  0.00 -2.00 -1.00 -0.95 -1.00 -1.00 -1.00 -0.90 -1.00 -4.00"
+        "jungle"   "-0.85 -0.90 -0.90  0.00 -2.00 -0.95 -0.90 -0.95 -0.95 -0.95 -0.85 -0.90 -4.00"
+        "barren"   "-1.05 -1.10 -1.10  0.00 -2.00 -1.15 -1.10 -1.15 -1.15 -1.15 -1.05 -1.15 -4.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "delta"
+        "normal"   "-0.50 -0.55 -0.55  0.00 -1.00 -0.60 -0.55 -0.60 -0.60 -0.60 -0.50 -0.60 -2.00"
+        "desert"   "-0.45 -0.50 -0.50  0.00 -1.00 -0.55 -0.50 -0.55 -0.55 -0.55 -0.45 -0.55 -2.00"
+        "ice"      "-0.40 -0.45 -0.45  0.00 -1.00 -0.50 -0.45 -0.50 -0.50 -0.50 -0.40 -0.50 -2.00"
+        "jungle"   "-0.35 -0.40 -0.40  0.00 -1.00 -0.45 -0.40 -0.45 -0.45 -0.45 -0.35 -0.45 -2.00"
+        "barren"   "-0.55 -0.60 -0.60  0.00 -1.00 -0.65 -0.60 -0.65 -0.65 -0.65 -0.55 -0.65 -2.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "road"
+        "normal"   "-1.00 -1.05 -1.05  0.00  0.00 -1.10 -1.05 -1.10 -1.10 -1.10 -1.00 -1.10  0.00"
+        "desert"   "-0.95 -1.00 -1.00  0.00  0.00 -1.05 -1.00 -1.05 -1.05 -1.05 -0.95 -1.05  0.00"
+        "ice"      "-0.90 -0.95 -0.95  0.00  0.00 -1.00 -0.95 -1.00 -1.00 -1.00 -0.90 -1.00  0.00"
+        "jungle"   "-0.85 -0.90 -0.90  0.00  0.00 -0.95 -0.90 -0.95 -0.95 -0.95 -0.85 -0.95  0.00"
+        "barren"   "-1.05 -1.10 -1.10  0.00  0.00 -1.15 -1.10 -1.15 -1.15 -1.15 -1.05 -1.15  0.00"
+}
+//                    F     W     T     A     N     S     H     J     C     L     M     G     U
+{ "structure"
+        "normal"   " 2.00  1.00  1.00  0.00  0.00  0.95  1.00  0.95  0.95  0.95  2.00  0.95  0.00"
+        "desert"   " 2.05  1.05  1.05  0.00  0.00  1.00  1.05  1.00  1.00  1.00  2.05  1.00  0.00"
+        "ice"      " 2.10  1.10  1.10  0.00  0.00  1.05  1.10  1.05  1.05  1.05  2.10  1.05  0.00"
+        "jungle"   " 2.15  1.15  1.15  0.00  0.00  1.10  1.15  1.10  1.10  1.10  2.15  1.10  0.00"
+        "barren"   " 1.95  0.95  0.95  0.00  0.00  0.90  0.95  0.90  0.90  0.90  1.95  0.90  0.00"
+}

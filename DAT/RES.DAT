@@ -1,0 +1,20 @@
+// V1.51
+//
+// Adds restock column so that MODders can control the League's Resource restocking
+//
+// Note that restock values cannot exceed max_cargo_pod_amount specified in EFS.INI
+{
+"name" "Food"          "sing" "Food"        "price" "1"   "restock" "500" "desc" "Most units consume 1 and cities 10 per turn. Needed to build cities."
+"name" "Energy"        "sing" "Energy"      "price" "3"   "restock" "300" "desc" "Used to produce other resources."
+"name" "Metal"         "sing" "Metal"       "price" "2"   "restock" "500" "desc" "Fundamental construction material for building cities."
+"name" "Trace"         "sing" "Trace"       "price" "5"   "restock" "300" "desc" "Used in production of composites and Electronics."
+"name" "Exotica"       "sing" "Exotica"     "price" "8"   "restock" "50"  "desc" "Used in production of Biochems."
+"name" "Chemicals"     "sing" "Chemical"    "price" "10"  "restock" "100" "desc" "Used to create other resources."
+"name" "Biochems"      "sing" "Biochem"     "price" "24"  "restock" "50"  "desc" "Used to genetically alter and enhance units."
+"name" "Electronics"   "sing" "Electronic"  "price" "11"  "restock" "100" "desc" "Used in servos, silicon wafers, think machines, and Fusoriums."
+"name" "Ceramsteel"    "sing" "Ceramsteel"  "price" "19"  "restock" "100" "desc" "Required for large space craft and powered body armor."
+"name" "Wetware"       "sing" "Wetware"     "price" "35"  "restock" "50"  "desc" "Meshes man and machine."
+"name" "Monopols"      "sing" "Monopol"     "price" "49"  "restock" "50"  "desc" "Needed for energy weapons and hovercraft."
+"name" "Gems"          "sing" "Gem"         "price" "13"  "restock" "50"  "desc" "A cash commodity and needed for singularity production."
+"name" "Singularities" "sing" "Singularity" "price" "464" "restock" "10"  "desc" "Needed for jump engines."
+}

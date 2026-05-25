@@ -1,0 +1,57 @@
+// Weapon Target Table
+// 
+//
+// V2022-12-04 (Nikolai): 	Targeting changes, see bottomn for details*
+// V2015-02-21 (Matt): Added new Mech, Gate, and Underwater movement types
+//
+// weapon types: water, indirect, air, direct, close, psychic, ranged space,
+//               direct space, close space.
+//
+//                 W  I  A  D  C  P  R  D  C
+//                 a  n  i  i  l  s  S  S  S
+//                 t  d  r  r  o  y  p  p  p
+{
+   "foot"        " 0  1  0  1  1  1  1  1  1" 
+   "wheel"       " 0  1  0  1  1  1  1  1  1"
+   "tread"       " 0  1  0  1  1  1  1  1  1"
+   "air"         " 0  0  1  0  0  1  1  1  1"
+   "naval"       " 0  1  0  1  1  1  1  1  1"
+   "space"       " 0  1  0  1  1  1  1  1  1"
+   "hover"       " 0  1  0  1  1  1  1  1  1"
+   "jump"        " 0  1  0  1  1  1  1  1  1"
+   "crawler"     " 0  1  0  1  1  1  1  1  1"
+   "lander"      " 0  1  0  1  0  1  1  1  1"
+   "mech"        " 0  1  0  1  1  1  1  1  1"
+   "gate"        " 0  0  1  0  0  1  1  1  1"
+   "underwater"  " 1  0  0  0  0  1  1  1  1"
+}
+//
+// Weapon Order and Number of Attack Phases
+//
+// Example:
+// "order"       " 6  7  8  5  2  1  0  3  4"
+// 6 = Ranged Space
+// 7 = Direct Space
+// 8 = Close Space
+// 5 = Psychic
+// 2 = Air
+// 1 = Indirect
+// 0 = Water
+// 3 = Direct
+// 4 = Close
+{
+   "order"       " 6  7  8  5  0  1  2  3  4"
+   "phases"      " 3  1  2  4  2  4  2  2  3"
+}
+// V2022-12-06 (Nikolai): *Combined Arms -> Made Direct and Close uniform against general land targets.
+//
+// Before, sending a single officer or noble with an armored stack meant that all enemy units with close would annihilate that single 
+// foot unit by focusing it down regardless of other non-foot combatants. The same would apply to mechanized units, meaning that 
+// you were much better off by using EITHER foot OR mechanized units, never to mix them.
+// Now, direct and close can target almost the same things, with the exception of Naval which only direct can target.
+//
+// Direct can target large vessels such as Landers, Naval and Gate. Close may not.
+//
+// Air gets 4 phases. In combination with unit.dat and damage.dat changes, air power is in a good place now.
+//
+// V2022-12-06 (Nikolai): Space attacks go first, any ground attack in space must brave intended attacks first.

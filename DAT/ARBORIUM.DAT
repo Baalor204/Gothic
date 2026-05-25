@@ -1,0 +1,81 @@
+// Arborium harvesting information
+//
+// (see farm.dat for the rules)
+//
+{ "ocean"
+   "normal"     "food" "7" "@"
+   "city"       "food" "3" "@"
+   "ice"        "food" "7" "@"
+   "jungle"     "food" "7" "@"
+   "barren"     "food" "7" "@"
+}
+{ "grass"
+   "normal"     "food" "12" "exotica" "1" "@"
+   "city"       "food" "12" "exotica" "1" "@"
+   "ice"        "food" "12" "exotica" "1" "@"
+   "jungle"     "food" "12" "exotica" "1" "@"
+   "barren"     "food" "12" "exotica" "1" "@"
+}
+{ "arid grass"
+   "normal"     "food" "7" "@"
+   "city"       "food" "3" "@"
+   "ice"        "food" "7" "@"
+   "jungle"     "food" "7" "@"
+   "barren"     "food" "7" "@"
+}
+{ "desert"  
+   "normal"     "food" "3" "@"
+   "city"       "food" "3" "@"
+   "ice"        "food" "3" "@"
+   "jungle"     "food" "3" "@"
+   "barren"     "food" "3" "@"
+}
+{ "ice"
+   "normal"     "food" "3" "@"
+   "city"       "food" "3" "@"
+   "ice"        "food" "3" "@"
+   "jungle"     "food" "3" "@"
+   "barren"     "food" "3" "@"
+}
+{ "tundra"
+   "normal"     "food" "7" "@"
+   "city"       "food" "7" "@"
+   "ice"        "food" "7" "@"
+   "jungle"     "food" "7" "@"
+   "barren"     "food" "7" "@"
+}
+{ "mountain"
+   "normal"     "food" "0" "@"
+   "city"       "food" "0" "@"
+   "ice"        "food" "0" "@"
+   "jungle"     "food" "0" "@"
+   "barren"     "food" "0" "@"
+}
+{ "hill"
+   "normal"     "food" "0" "@"
+   "city"       "food" "0" "@"
+   "ice"        "food" "0" "@"
+   "jungle"     "food" "0" "@"
+   "barren"     "food" "0" "@"
+}
+{ "tree"
+   "normal"     "food" "7" "@"
+   "city"       "food" "0" "@"
+   "ice"        "food" "7" "@"
+   "jungle"     "food" "7" "@"
+   "barren"     "food" "7" "@"
+}
+{ "river"
+   "normal"     "food" "12" "exotica" "1" "@"
+   "city"       "food" "12" "exotica" "1" "@"
+   "ice"        "food" "12" "exotica" "1" "@"
+   "jungle"     "food" "12" "exotica" "1" "@"
+   "barren"     "food" "12" "exotica" "1" "@"
+}
+{ "delta"
+   "normal"     "food" "12" "exotica" "1" "@"
+   "city"       "food" "12" "exotica" "1" "@"
+   "ice"        "food" "12" "exotica" "1" "@"
+   "jungle"     "food" "12" "exotica" "1" "@"
+   "barren"     "food" "12" "exotica" "1" "@"
+}
