@@ -37,7 +37,7 @@
 "need" "energy"        "10"
 "need" "monopols"      "5" 
 "need" "electronics"   "5" 
-"make" "singularities" "5"
+"make" "singularities" "2"
 }
 {
 "city" "fusorium"
