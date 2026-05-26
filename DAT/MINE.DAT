@@ -45,11 +45,11 @@
    "barren"     "metal" "0" "@"
 }
 { "mountain"
-   "normal"     "metal" "5" "trace" "3" "gems" "1" "@"
+   "normal"     "metal" "10""trace" "3" "gems" "1" "@"
    "city"       "metal" "0" "@"
-   "ice"        "metal" "5" "trace" "3" "gems" "1" "@"
-   "jungle"     "metal" "5" "trace" "3" "gems" "1" "@"
-   "barren"     "metal" "5" "trace" "3" "gems" "1" "@"
+   "ice"        "metal" "10""trace" "3" "gems" "1" "@"
+   "jungle"     "metal" "10""trace" "3" "gems" "1" "@"
+   "barren"     "metal" "10""trace" "3" "gems" "1" "@"
 }
 { "hill"
    "normal"     "metal" "5" "trace" "3" "gems" "1" "@"
