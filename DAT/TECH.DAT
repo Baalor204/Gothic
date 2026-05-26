@@ -115,7 +115,7 @@
 "name" "Doomsday Liturgies"             "stats" " 19  28   0   0   0   0   0   0   0   0    300    20     3     0    -1"   "extra" "Physics requirement for Singularity"
 "name" "Aegis Reaction"                 "stats" " 26   0   0   0   0   0   0   0   0   0    500    20     2     0    -1"   "extra" "Physics requirement for Ceramsteel Units"
 "name" "Suppression Marines"            "stats" " 27   0   0   0   0   0   0   0   0   0    500    20     2     0    -1"   "extra" "Physics requirement for Biochem Units"
-"name" "Monolith Leviathans"           "stats" " 28   0   0   0   0   0   0   0   0   0    500    20     2     0    -1"   "extra" "Physics requirement for Monopol Units"
+"name" "Monolith Leviathans"            "stats" " 28   0   0   0   0   0   0   0   0   0    500    20     2     0    -1"   "extra" "Physics requirement for Monopol Units"
 "name" "Synaptic Seers"                 "stats" " 29  32   0   0   0   0   0   0   0   0    500    20     2     0    -1"   "extra" "Physics requirement for Wetware Units"
 "name" "Event-Horizon Dreadnoughts"     "stats" " 30  33   0   0   0   0   0   0   0   0    500    20     2     0    -1"   "extra" "Physics requirement for Singularity Units"
 "name" "-End of Physics Archive-------" "stats" "800   0   0   0   0   0   0   0   0   0      0    21     0     0    -1"   "extra" "----End of Physics Archive-------------------------------------------------------------------"
