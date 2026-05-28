@@ -38,7 +38,7 @@
 "+Unit Healing Rate"        "0     0     0     0     0     0     0     0     0"
 "+Plague"                   "0     0     0     0     0     0     0     0     0"
 "*Production Rate"          "0     0     0     0     0     0     0     0     0"
-"*Research Rate"            "0     0     0     0     0     0     0     0     0"
+"*Research Rate"            "0     0    10     0     0     0     0     0     0"
 "*Technology Maintenance"   "0     0     0     0     0     0     0     0     0"
 "*Proscribed Maintenance"   "0     0     0     0     0     0     0     0     0"  // Cumulative with above
 "*Lab Maintenance"          "0     0     0     0     0     0     0     0     0"
@@ -87,13 +87,13 @@
 //                           t     e     k     c     e     o     n     m     u 
 //-----------------------------------------------------------------------------
 { "P2"                                                                        
-"+Loyalty"                 " 0     0     0     0     0     0     0     0     0"
-"+Healing Rate"            " 0     0     0     0     0     0     0     0     0"
+"+Loyalty"                 "10     0     0     0    10     0     0     0     0"
+"+Healing Rate"            " 0    10    10     0     0     0     0    10     0"
 "+Plague"                  " 0     0     0     0     0     0     0     0     0"
-"*Tax Rate"                " 0     0     0     0     0     0     0     0     0"
+"*Tax Rate"                " 0    10     0     0     0     0     0     0     0"
 "*Production Rate"         " 0     0     0     0     0     0     0     0     0"
-"*Research Rate"           " 0     0     0     0     0     0     0     0     0"
-"*Lab Maintenance"         " 0     0     0     0     0     0     0     0     0"
+"*Research Rate"           " 0     0    10     0     0     0     0     0     0"
+"*Lab Maintenance"         " 0     0   -40     0     0     0     0     0     0"
 "+Change Sect"             "20    40    35    50    25    30    45     0     0"
 }
 //
@@ -109,14 +109,14 @@
 //                    t     e     k     c     e     o     n     m     u 
 //----------------------------------------------------------------------
 { "P3"                                                                 
-"+Healing Rate"      "0     0     0     0     0     0     0     0     0"
+"+Healing Rate"      "0    10    10     0     0     0     0    10     0"
 "+Plague"            "0     0     0     0     0     0     0     0     0"
-"+Experience"        "0     0     0     0     0     0     0     0     0"
-"+Routing"           "0     0     0     0     0     0     0     0     0"
-"+Rebellion"         "0     0     0     0     0     0     0     0     0"
-"+Loyalty"           "0     0     0     0     0     0     0     0     0"
+"+Experience"        "10    0    10     0     0    10    10     0    10"
+"+Routing"           "0     0     0     0    10    10     0    10    10"
+"+Rebellion"         "0     0     0    10     0     0     0     0     0"
+"+Loyalty"           "10    0     0     0    10     0     0     0     0"
 "+Ruin"              "0     0     0     0     0     0     0     0     0"
-"*Upkeep"            "0     0     0     0     0     0     0     0     0"
+"*Upkeep"            "0   -10     0   -10     0     0   -10     0     0"
 }
 //
 // Section I1 - Sect Individual Statistic Bonuses
@@ -131,13 +131,13 @@
 //----------------------------------------------------------------------
 { "I1"                                                                 
 "*Move Points"       "0     0     0     0     0     0     0     0     0"
-"+Spotting"          "0     0     0     0     0     0     0     0     0"
-"+Camouflage"        "0     0     0     0     0     0     0     0     0"
-"+Agility"           "0     0     0     0     0     0     0     0     0"
-"*Armor"             "0     0     0     0     0     0     0     0     0"
-"*Psy Defense"       "0     0     0     0     0     0     0     0     0"
-"+Accuracy"          "0     0     0     0     0     0     0     0     0"
-"*Attack Strength"   "0     0     0     0     0     0     0     0     0"
+"+Spotting"          "0     0     1     0     0     0     1     1     1"
+"+Camouflage"        "0     0     0     1     0     0     1     1     0"
+"+Agility"           "0     1     0     1     0     0     0     1     1"
+"*Armor"             "0    10     0     0    10     0     0     0    10"
+"*Psy Defense"       "0    10     0     0    10     0     0     0    10"
+"+Accuracy"          "0     0     1     0     0     1     0     1     1"
+"*Attack Strength"   "0     0     0     0    10    10     0    10    10"
 }
 // Section I2 - Sect Individual Combat Weaponry Bonuses
 //
@@ -152,15 +152,15 @@
 //                 +Acc  *AS  +Acc  *AS  +Acc  *AS  +Acc  *AS  +Acc  *AS  +Acc  *AS  +Acc  *AS  +Acc  *AS  +Acc  *AS 
 //-------------------------------------------------------------------------------------------------------------------
 { "I2"                                                                                       
-"Water"             "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0"
-"Indirect"          "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
-"Air"               "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
-"Direct"            "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
-"Close"             "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
+"Water"             "0    0     0    0     1    0     0    0     0    0     0    0     0    0     0    0     0    0"
+"Indirect"          "0    0     0    0     1    0     0    0     0   10     1   10     0    0     1   10     1   10" 
+"Air"               "0    0     0    0     1    0     0    0     0    0     0    0     0    0     0    0     0    0" 
+"Direct"            "0    0     0    0     1    0     0    0     0   10     1   10     0    0     1   10     1   10" 
+"Close"             "0    0     0    0     1    0     0    0     0   10     1   10     0    0     1   10     1   10" 
 "Psy"               "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
-"Ranged Space"      "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
-"Direct Space"      "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
-"Close Space"       "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
+"Ranged Space"      "0    0     0    0     1    0     0    0     0    0     0    0     0    0     0    0     1   10" 
+"Direct Space"      "0    0     0    0     1    0     0    0     0    0     0    0     0    0     0    0     1   10" 
+"Close Space"       "0    0     0    0     1    0     0    0     0    0     0    0     0    0     0    0     1   10" 
 }
 //
 // Section I3 - Sect Individual Miscellaneous Bonuses
@@ -175,12 +175,12 @@
 //                    t     e     k     c     e     o     n     m     u 
 //----------------------------------------------------------------------
 { "I3"                                                                 
-"+Healing Rate"      "0     0     0     0     0     0     0     0     0"
+"+Healing Rate"      "0    10    10     0     0     0     0    10     0"
 "+Plague"            "0     0     0     0     0     0     0     0     0"
-"+Experience"        "0     0     0     0     0     0     0     0     0"
-"+Routing"           "0     0     0     0     0     0     0     0     0"
-"+Rebellion"         "0     0     0     0     0     0     0     0     0"
-"+Loyalty"           "0     0     0     0     0     0     0     0     0"
+"+Experience"        "10    0    10     0     0    10    10     0     0"
+"+Routing"           "0     0     0     0    10    10     0     0     0"
+"+Rebellion"         "0     0     0    10     0     0     0     0     0"
+"+Loyalty"           "10    0     0     0    10     0     0     0     0"
 "+Ruin"              "0     0     0     0     0     0     0     0     0"
 "*Upkeep"            "0     0     0     0     0     0     0     0     0"
 "+Change Sect"       "40   45    25    50    30    35    20     0     0"
