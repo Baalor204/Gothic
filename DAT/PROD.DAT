@@ -2,7 +2,7 @@
 {
 "city" "chemicals"
 "need" "energy"      "10"
-"need" "trace"       "10"
+"need" "exotica"     "10"
 "make" "chemicals"   "10"
 }
 {
@@ -14,7 +14,6 @@
 {
 "city" "bioplant"
 "need" "energy"      "10"
-"need" "exotica"     "10"
 "need" "chemicals"   "5" 
 "make" "biochems"    "10"
 }
