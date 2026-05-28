@@ -1,0 +1,92 @@
+"WindowMess": {
+    "strings": [
+        {
+            "ID": 30000,
+            "value": "File not found."
+        },
+        {
+            "ID": 30001,
+            "value": "Are you sure you wish to overwrite\n%s?"
+        },
+        {
+            "ID": 30002,
+            "value": "~File Name:"
+        },
+        {
+            "ID": 30003,
+            "value": "File ~List:"
+        },
+        {
+            "ID": 30004,
+            "value": "~Dirs/Drives:"
+        },
+        {
+            "ID": 30100,
+            "value": "CD Play list Missing."
+        },
+        {
+            "ID": 30101,
+            "value": "CD Player failed to start.\nCD drive may be in use by another program,\n(such as default Win95 CD Player)."
+        },
+        {
+            "ID": 30102,
+            "value": "CD Player Setup"
+        },
+        {
+            "ID": 30103,
+            "value": "Music ~On"
+        },
+        {
+            "ID": 30104,
+            "value": "Music O~ff"
+        },
+        {
+            "ID": 30105,
+            "value": "~Done"
+        },
+        {
+            "ID": 30106,
+            "value": "No audio tracks found on this CD."
+        },
+        {
+            "ID": 31001,
+            "value": "That Control Is Disabled."
+        },
+        {
+            "ID": 31002,
+            "value": "~Cancel"
+        },
+        {
+            "ID": 31003,
+            "value": "~Yes"
+        },
+        {
+            "ID": 31004,
+            "value": "~No"
+        },
+        {
+            "ID": 31005,
+            "value": "~O.K."
+        },
+        {
+            "ID": 31006,
+            "value": "%3ld%% Done"
+        },
+        {
+            "ID": 32001,
+            "value": "Error: Insufficient Memory."
+        },
+        {
+            "ID": 32002,
+            "value": "Error: %s file missing or corrupt."
+        },
+        {
+            "ID": 32003,
+            "value": "Some machines may have trouble switching to the screen resolution of the game\nTry setting your color palette to 256 colors if you experience problems."
+        },
+        {
+            "ID": 32004,
+            "value": "Warning"
+        }
+    ]
+}

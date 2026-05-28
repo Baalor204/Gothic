@@ -30,18 +30,20 @@
 //
 // Example:
 // "order"       " 6  7  8  5  2  1  0  3  4"
+// 0 = Water
+// 1 = Indirect
+// 2 = Air
+// 3 = Direct
+// 4 = Close
+// 5 = Psychic
 // 6 = Ranged Space
 // 7 = Direct Space
 // 8 = Close Space
-// 5 = Psychic
-// 2 = Air
-// 1 = Indirect
-// 0 = Water
-// 3 = Direct
-// 4 = Close
+// order cannot be changed it seems
+// order: Water-Indirect-Air-Direct-Close-Psychic-RangedSp-DirectSp-CloseSp
 {
-   "order"       " 6  7  8  5  0  1  2  3  4"
-   "phases"      " 3  1  2  4  2  4  2  2  3"
+   "order"       "0  1  2  3  4  5  6  7  9"
+   "phases"      "2  4  2  2  3  4  3  1  2"
 }
 // V2022-12-06 (Nikolai): *Combined Arms -> Made Direct and Close uniform against general land targets.
 //

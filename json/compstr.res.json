@@ -1,0 +1,72 @@
+"glCompStr": {
+    "strings": [
+        {
+            "ID": 100,
+            "value": "I give you a gift."
+        },
+        {
+            "ID": 101,
+            "value": "House %s is too powerful!"
+        },
+        {
+            "ID": 102,
+            "value": "Let's attack them!"
+        },
+        {
+            "ID": 103,
+            "value": "I will unleash the plague if you do not cease attacking me!"
+        },
+        {
+            "ID": 104,
+            "value": "I declare war on your house!"
+        },
+        {
+            "ID": 106,
+            "value": "I offer votes for peace."
+        },
+        {
+            "ID": 107,
+            "value": "I offer peace for votes."
+        },
+        {
+            "ID": 108,
+            "value": "I am at your mercy.  Give us a cease-fire!"
+        },
+        {
+            "ID": 109,
+            "value": "This war helps no one, let us end it."
+        },
+        {
+            "ID": 110,
+            "value": "Please vote for me."
+        },
+        {
+            "ID": 111,
+            "value": "Vote for me or else!"
+        },
+        {
+            "ID": 112,
+            "value": "Vote for me or feel our wrath!"
+        },
+        {
+            "ID": 1000,
+            "value": "Stupid %s, I will feed your worthless carcass to my hounds!"
+        },
+        {
+            "ID": 1001,
+            "value": "Pitiful %s, why don't you accept my inevitable victory and resign now?"
+        },
+        {
+            "ID": 1002,
+            "value": "Poor little %s, resign now and I may let you live as my pleasure toy."
+        },
+        {
+            "ID": 1003,
+            "value": "Call your confessor, %s, for you are about to meet the Pancreator!"
+        },
+        {
+            "ID": 1004,
+            "value": "If you think you are suffering now, wait until the Patriarch excommunicates you!  Then you will beg me for peace."
+        }
+    ]
+}

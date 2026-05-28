@@ -1,0 +1,460 @@
+"glTutorial": {
+    "strings": [
+        {
+            "ID": 1,
+            "value": "You must first select a negative trait or deselect an existing positive one."
+        },
+        {
+            "ID": 2,
+            "value": "You may now select an additional positive trait."
+        },
+        {
+            "ID": 3,
+            "value": "Air units\n\nThis group contains air units. They must land in a city or a naval carrier or they will run out of fuel and be destroyed. They are also refueled when loaded aboard a transport. Note that certain air units may not have this restriction."
+        },
+        {
+            "ID": 4,
+            "value": "This is Byzantium Secundus, capital of human space.\n\nYou must maintain a Noble on the planet to be eligible to vote for the Regent.\n\nCombat is prohibited here unless someone declares themselves Emperor of the known worlds or a unit is of a special type, for example:\n\n1) Spies\n\n2) Submarines\n\n3) Stealth Ships\n\n4) and more..."
+        },
+        {
+            "ID": 5,
+            "value": "My Lord, to become Emperor you must first be elected Regent. At that point declare yourself Emperor. If you manage to win two successive elections, the other Royal Houses will submit to your rule. However, should all of our Nobles die, our house will become extinct."
+        },
+        {
+            "ID": 6,
+            "value": "Engineers\n\nYour success as an empire builder is based upon more than battle strategy.  Engineers build cities (and raze them) as well as roads.  Don't underestimate their value to your campaign.  To use them:\n\n1) Select the engineer.\n\n2) Select Build from the Orders Menu (or press the \"B\" key).\n\nReminder...Engineers are expensive, so use them wisely."
+        },
+        {
+            "ID": 7,
+            "value": "Using Nobles In Stacks\n\nNobles provide a stabilizing focal point amidst the chaos of wartime struggle.\n\nBecause of this, they give any Stack an Accuracy bonus, an Agility bonus and a Retreat bonus in combat.\n\nUse them judiciously, however, for if all of your Nobles are destroyed, your time as house leader is over."
+        },
+        {
+            "ID": 8,
+            "value": "Using Officers In Stacks\n\nOfficers give any Stack an Accuracy bonus, an Agility bonus and a Retreat bonus in combat.\n\nThese bonuses are not, however, as effective as the ones which Nobles provide."
+        },
+        {
+            "ID": 9,
+            "value": "Naval Carriers and Their Support Of Aircraft\n\nCarriers are useful for moving Air units over long distances.  Air units can load onto them and refuel.  This allows your aircraft to cover larger amounts of territory."
+        },
+        {
+            "ID": 10,
+            "value": "Assault Landers\n\nMost spaceships can land in any type of terrain (other than Water hexes, which do not accept any landing vessel).\n\nAssault Landers, unlike other landable spacecraft, suffer no damage from landing outside of Cities."
+        },
+        {
+            "ID": 11,
+            "value": "Plague Bomb\n\nThe Plague Bomb can be used to expose your enemies to the plague.  But be forewarned, your enemies may not be the only forces infected with the disease..."
+        },
+        {
+            "ID": 12,
+            "value": "Spies, and Their Usefullness\n\nThe savvy house leader understands the usefulness of covert operatives.\n\nSpies have the following special traits:\n\n1) They have greater spotting range than most Units.\n\n2) Spies in Combat also have a chance to hit enemy Nobles and Officers directly.\n\n3) Spies may also engage in Combat on Byzantium II.\n\nReminder...Use Spies wisely, they are costly and time consuming to Build."
+        },
+        {
+            "ID": 13,
+            "value": "Spaceships and Interplanetary Travel\n\nUse spaceships to travel from planet-to-planet via jumpgates.\n\n1) Select the desired vessel, then\n\n2) Click on the planet to which you wish to travel.\n\nDoing so will cause a lighted path to appear along the jumpgate route between your point of departure and your destination.\n\nTo begin your journey, click again on the planet you want to go to, or press the GoTo button."
+        },
+        {
+            "ID": 14,
+            "value": "Spaceships and Ranged Space Attacks\n\nSpaceships with ranged space attack capabilities can bombard units or cities from space.\n\n1) Select the attacking spaceship.\n\n2) Select the planet the attacking spaceship is orbiting.\n\n3) Press the attack button.\n\n4) Select the specific hex you wish to bombard.\n\nNote: you are allowed to bombard empty hexes to try to find enemies, but it will cost your ship 1 movement point for each attempt."
+        },
+        {
+            "ID": 15,
+            "value": "Spaceships and Unit Transport\n\nSome of your spaceships can transport other units.\n\nTo load units into a ship's cargo bay:\n\n1) Click on the unit to be loaded.\n\n2) Drag the chosen unit onto the icon of the ship that will be carrying it to its new destination.\n\nTo unload units from a ship:\n\n1) Click on the unit that you wish to have disembark.\n\n2) Drag the chosen unit onto an empty box or the icon of another vessel."
+        },
+        {
+            "ID": 16,
+            "value": "Naval Transports and Unit Transportation\n\nSome of your naval ships can transport other units.\n\nTo load units into a ship's cargo bay:\n\n1) Click on the unit to be loaded.\n\n2) Drag the chosen unit onto the icon of the ship that will be carrying it to its new destination.\n\nTo unload units from a ship:\n\n1) Click on the unit that you wish to have disembark.\n\n2) Drag the chosen unit onto an empty box or the icon of another vessel.\n\nNote that you can also unload units when traveling by sea onto land by bumping into a land hex."
+        },
+        {
+            "ID": 17,
+            "value": "Starvation In Cities and Units\n\nThis City or Unit is suffering from food shortage.  Fully populated Cities consume 10 points of food per turn.  To remedy the famine:\n1) Increase your food production.\n2) Buy food from the League.\n3) Disband unnecessary units."
+        },
+        {
+            "ID": 18,
+            "value": "Plagued City Or Unit\n\nThis city or unit has contracted the Plague.  The yellow exclamation mark indicates infection.  When the unit begins to take damage from the Plague, the exclamation mark turns red, at which point the infection is permanent and a cure is no longer possible!  The Plague can occur by starvation, or as a result of combat involving Plague weapons.  Reminder...The Plague is extremely contagious, and spreads rapidly through your forces.  A Hospital aids with preventing the infection from setting.  The more medical facilities on the planet you have, the more likely the infection can be stopped before it's too late. "
+        },
+        {
+            "ID": 19,
+            "value": "Ruins, Alien Ruins and Monasteries\n\nAs you explore your homeworld and other planets you may run across many strange locales.\n\nHidden within these structures built by ancient peoples, aliens and obscure religious organizations, are a myriad of things.\n\nAmong these may be lost artifacts or long forgotten knowledge.\n\nEnter them carefully, though, for these treasures may be guarded by things equally ancient and deadly."
+        },
+        {
+            "ID": 20,
+            "value": "Hives\nSymbiot hordes gather in Hives.  These Hives are always defended well. Letting Symbiot forces gain a foothold in any territory, however, is a deadly proposition."
+        },
+        {
+            "ID": 21,
+            "value": "Factories\n\nFactories are Cities which can be used to build a wide variety of Units.  All Factories can produce and repair Military Vehicles.  Beyond that there are other elements that determine what a factory can produce:\n\n1) Factories bordering bodies of water can also produce Naval Units.\n\n2) Some Units which can be produced in your Factories require appropriate research before they are available for production.  To scroll through your available options select the Build button.\n\nReminder...New unit options are immediately entered into the Build screen upon completion of the appropriate research."
+        },
+        {
+            "ID": 22,
+            "value": "Forts\n\nMilitary Units can be produced in Forts.\n\nSome Units which can be produced in your Forts require appropriate research before they are available for production.\n\n1) Select the Build button to scroll through your options.\n\nReminder...New Unit options are immediately entered into the Build screen upon completion of the appropriate research."
+        },
+        {
+            "ID": 23,
+            "value": "Starports\n\nSpaceships and Starbases can be produced and repaired in Starports.\n\nSome Units which can be produced in your Starports require appropriate research before they are available for production.\n\n1) Select the Build button to scroll through your options.\n\nReminder...New Unit options are immediately entered into the Build screen upon completion of the appropriate research."
+        },
+        {
+            "ID": 24,
+            "value": "Raw Materials and Resources\n\nThis hex contains a Resource bonus.\n\nBuild the appropriate Resource gathering city within 2 hexes of the bonus icon and receive additional Resource units.\n\nYou can also cursor to this resource in the resource below to show harvesting potential by the appropriate harvesting city."
+        },
+        {
+            "ID": 25,
+            "value": "The League Agora\n\nThe Agora is an outpost for the merchant League.  To purchase from the League, select the Agora, click the Trade button and choose from the available Resources.  To sell to the League, you must move cargo to the Agora."
+        },
+        {
+            "ID": 26,
+            "value": "The Planetary Warehouse can be used in two different modes.  Based on your choice it can either:\n\n1) Report individual planet resource production and consumption within your sphere of power.\n\n2) Report your galaxy-wide resource production and consumption."
+        },
+        {
+            "ID": 27,
+            "value": "Cities and Their Stacks\n\nUnit Stacks\n\nThe units defending the city are shown in the middle of the Stack screen.\n\nHere you can interact with your units:\n\n1) Hover the mouse on a unit to show its statistics and features.\n\n2) Drag units to load them onto a transport.\n\n3) Use the Sentry Button in the lower right to assign orders."
+        },
+        {
+            "ID": 28,
+            "value": "Ancient Relics\n\nYou have discovered a Relic, an ancient instrument of holy power.\n\nTo reap the benefits of this item your house must research Theurgy.\n\nReminder...Some Relics affect only a Stack, some provide their boon to the entire planet they are on and others aid your House throughout the galaxy."
+        },
+        {
+            "ID": 29,
+            "value": "Banners and Diplomacy\n\nDiplomacy often involves tradeoffs.  To promote your agenda, you will need to consider making an offer to other houses for things you want.  Each of the following particulars can play a major part in helping or harming your chances for profitable negotiation:\n\n1) Who you choose to ask.\n\n2) How you ask them.\n\n3) What you offer in exchange."
+        },
+        {
+            "ID": 30,
+            "value": "City Construction\n\nBuilding Cities should be thoughtful work.  Any Engineer worth his salt will tell you that some locations are more fit for certain types of Cities than others.  For example, it would make little sense to construct an Oil Well where there isn't any oil in the ground."
+        },
+        {
+            "ID": 31,
+            "value": "House Management\n\nFrom here, the House Ruler can:\n\n1) Manage their economy by changing the budgetary parameters in the lower right.\n\n2) Compare their overall score to that of other House Rulers in the upper right.\n\n3) Evaluate House Treaties and Relations in the lower left.\n\n4) Compare House Totals of various items, in the lower middle.\n\nTo learn more about the various areas right click on them."
+        },
+        {
+            "ID": 32,
+            "value": "This screen represents the current political structure.\n\n1) If a house leader becomes Regent, that house's banner will hang at the Imperial Regent position.\n\n2) Ministry holders hang their banners at specified positions below the Regent's banner.  Ministries come with more than fancy trappings.  (To learn more about their benefits and their responsibilities right click on their banners.)"
+        },
+        {
+            "ID": 33,
+            "value": "Moving Your Units\n\nTo move a unit:\n\n1) Right click on the Unit you wish to move to select it.\n\n2) Point with the mouse to trace out a potential movement path to that location and this will produce a line of green dots on the terrain map showing the movement course for your chosen unit, followed by a green X marking the unit's final destination.\nRed dots and X's indicate that the unit does not have the required number of movement points to move to the desired hex during the current turn.\n\n3) Lastly when you have decided on a location to move, left click on the hex to which you want the unit to move and your unit(s) will start to move to that location."
+        },
+        {
+            "ID": 34,
+            "value": "Hospital Cities\n\nHospital cities provide the needed health care to citizens and foot military units. \n\nHospitals are vital in helping against the plague infection."
+        },
+        {
+            "ID": 35,
+            "value": "Farm Cities\n\nFarm cities harvest the food required to keep the hungry masses from starving.  If you do not produce enough food for your people every turn, your units and cites will begin to starve.  Starving units in or out of cities lose health every turn.  "
+        },
+        {
+            "ID": 36,
+            "value": "Arborium Cities\n\nArborium cities harvest food much like Farm cities.  However, the Arborium city can harvest food in much harsher conditions.  Arboriums may also harvest Exotica. Exotica units represent the rare and wild plants that produce the special ingredients needed for Biochemicals.  The maximum amount of Food and Exotica units produced by an Arborium city every turn will depend on the following:\n\n1) Location\n\n2) Loyalty\n\n3) Population of the Arborium.\n\nReminder... Only one harvest city is allowed in a five hex radius, so choose the location of your Arboriums wisely."
+        },
+        {
+            "ID": 37,
+            "value": "Land units help"
+        },
+        {
+            "ID": 38,
+            "value": "Bombard units help"
+        },
+        {
+            "ID": 39,
+            "value": "Commander Of The Stigmata Garrison\n\nThe Stigmata Garrison command brings with it the heavy responsibility of guarding the Known Worlds against the everpresent threat of the Symbiot hordes.  To combat these alien nightmares, this important command is provided with the following:\n\n1) The Garrison Commander has control of substantial forces on the planet Stigmata.\n\n2) Production facilities on Stigmata are also controlled by the Commander.\n\n3) A small fleet of ships completes the Stigmata Garrison's retinue."
+        },
+        {
+            "ID": 40,
+            "value": "Minister Of The Imperial Eye\n\nThe Imperial Eye, as its name implies, is responsible for watching what the houses are doing...just to promote the best interests of the Empire, mind you.  To this end, the Minister is placed in charge of:\n\n1) A fort and small garrison, including spies, on Byzantium II.\n\n2) Forts, similarly equipped, on the homeworld of each house.\n\nRemember: Spies can be used to acquire knowledge of Church relations with the other Houses and if on Symbiot or Vau worlds, flock counts of those races can be acquired. They are also useful for many other purposes..."
+        },
+        {
+            "ID": 41,
+            "value": "Commander Of The Imperial Fleet\n\nThe Imperial Fleet Commander guards the jumpgates and their respective jumproutes through space. To facilitate this the Commander controls a large fleet of highly advanced ships."
+        },
+        {
+            "ID": 42,
+            "value": "The House Buttons\n\nMinisters and non-minister nobles alike need to be able to participate in diplomatic exchanges.\n\n1) To access your own House Screen press your House button.\n\n2) To access the Diplomacy Screen for any  other House press its corresponding House button."
+        },
+        {
+            "ID": 43,
+            "value": "Financing Your Campaign\n\nTaxes have been considered by many throughout time to be one of the most evil of necessities.\n\nHow you handle the burden you place on your producers is indeed a delicate matter.\n\nThe basis for your tax revenue is the number of cities you control.\n\nTo alter tax level:\n\n1) Use the Tax slide bar to increase or decrease your cut.\n\nReminder...Be careful in your choice of tax level; there is good and bad with either decision...(see following notes for more detail)."
+        },
+        {
+            "ID": 44,
+            "value": "Tithes To The Church (and The Skimming Thereof)\n\nEach city pays a tithe (in firebirds) to the Church.\n\nThis amounts to another of those necessary taxes.\n\nYou collect these for the Church leadership back on Holy Terra.\n\nThey are, however, some distance away and might not notice a shortage...\n\n1) Use the Tithe Skim slide bar to lighten their burden."
+        },
+        {
+            "ID": 45,
+            "value": "Unit Pay\n\nAll of your troop units receive a salary for their efforts.\n\nHow well you pay them affects their loyalty and combat performance.\n\n1) Use the Unit Pay slide bar to raise or lower your troops' salaries."
+        },
+        {
+            "ID": 46,
+            "value": "Debt / Bank / Total\n\n1) Debt = Your house's level of indebtedness to the League.\n\n2) Bank = The amount of firebirds (money) in your coffers.\n\n3) Total = The amount of firebirds that will be available to you at the beginning of the next year (turn)."
+        },
+        {
+            "ID": 47,
+            "value": "Treaty Matrix\n\nThe treaty matrix illustrates the current political status of each house relative to the other.\n\nFor the political status of the Church or the League, access that power's diplomacy screen."
+        },
+        {
+            "ID": 48,
+            "value": "Technological Development and The Process of Research.\n\nWell strategized Research is a critical aspect of success for your house in the long term.  From designing more highly advanced Units to creating a cure for the Plague, technology will greatly help you in your quest to become Emperor."
+        },
+        {
+            "ID": 49,
+            "value": "Making Use Of Diplomacy\n\nDiplomacy plays an important role in keeping relations with the other houses.  From this screen:\n\n1) Contracts can be made with other powers.\n\n2) Technology can be Traded.\n\n3) War can be Declared.\n\n4) Political favor can be levied.\n\n5) Map information can be sold to the alien Vau.\n\nReminder...Be careful what you offer, you may find yourself regretting it later."
+        },
+        {
+            "ID": 50,
+            "value": "Wetware Cities\n\nWetware cities produce the cybernetic implants required for highly advanced military Units.\n\nThe production of 10 Wetware units requires:\n\n1) 10 Electronics\n\n2) 10 Ceramsteel\n\n3) 10 Biochemicals\n\nReminder... Wetware cities will automatically produce Wetware units provided you have the required resources."
+        },
+        {
+            "ID": 51,
+            "value": "Palace Cities\n\nPalaces are the capital cities of each planet.\n\nIf you control the Palace, the planet is considered under your control and you may collect taxes from the planet's citizens under your house.\n\nReminder... Only one Palace is allowed per planet - planets without one are displayed in white on the galaxy map; otherwise, the color of the player that controls that planet's Palace is shown.."
+        },
+        {
+            "ID": 52,
+            "value": "Cathedral Cities\n\nThe Cathedral determines the Sect of a planet.\n\nOnly one Cathedral is allowed per planet.\n\nSects \n\nDifferent sects have various bonuses depending on their Doctrine.\n\nIf you change the Sect of the Cathedral, all units and cities on the planet will be subject to conversion in time.\n\nMore Clergy units on a planet will draw in more followers to their own sect and reduce the frequency of religious rebellions and generate more income from skimming the Tithe.\n\nThe Cathedral on Holy Terra is special as the Sect of the Patriarch draws the masses to convert.\n\nThe further away from Holy Terra, the less this effect is apparent."
+        },
+        {
+            "ID": 53,
+            "value": "Electronics Cities\n\nElectronics cities produce the advanced circuitry required for military units, spacecraft, and advanced resources.\n\nThe production of 10 units of Electronics requires:\n\n1) 10 Energy\n\n2) 5 Trace\n\nReminder...Electronics cities will automatically produce Electronics units provided you have enough resources."
+        },
+        {
+            "ID": 54,
+            "value": "Ceramsteel Cities\n\nCeramsteel cities produce Ceramsteel the strongest material known to man.\n\nCeramsteel is required for almost all advanced military units and spacecraft.\n\nThe production of 10 Ceramsteel units requires:\n\n1) 10 Energy\n\n2) 10 Chemicals\n\n3) 7 Trace\n\nReminder... Ceramsteel cities will automatically produce Ceramsteel units provided you have the required resources."
+        },
+        {
+            "ID": 55,
+            "value": "Bioplant Cities\n\nBioplant cities produce Biochemicals.\n\nBiochemicals are used in the production of genetically modified beings.\n\nThe production of 10 Biochemicals requires:\n\n1) 10 Energy\n\n2) 10 Exotica\n\n3) 10 Chemicals\n\nReminder... Bioplant cities will automatically produce Biochemicals provided you have the required resources."
+        },
+        {
+            "ID": 56,
+            "value": "Chemicals Cities\n\nChemicals cities produce the complex chemicals required for advanced resources and chemical warfare.\n\nThe production of 10 units of Chemicals requires:\n\n1) 10 Energy\n\n2) 5 Trace\n\nReminder... Chemicals cities will automatically produce Chemicals provided you have the required resources."
+        },
+        {
+            "ID": 57,
+            "value": "Cyclotron Cities\n\nCyclotron cities produce Singularities.\n\nSingularities power the engines of the jump-capable spacecraft.\n\nThe production of ONE Singularity requires:\n\n1) 10 Energy\n\n2) 10 Monopols\n\n3) 7 Gems\n\nReminder... Cyclotron cities will automatically produce Singularities provided you have enough resources."
+        },
+        {
+            "ID": 58,
+            "value": "Shield Cities\n\nShield cities draw upon the energy at the core of a planet to produce a powerful dome of energy.\n\nAny city adjacent to a Shield city will be under this dome.\n\nThe energy dome protects all cities under it from orbital bombardment.\n\nReminder...  Only one Shield city is allowed on a planet."
+        },
+        {
+            "ID": 59,
+            "value": "Mine Cities\n\nMine cities harvest the raw materials required for advanced resources.\n\nMines will produce in any combination, the following:\n\n1) Metal\n\n2) Trace\n\n3) Gems\n\nDepending on their location.\n\nReminder... Only one harvest city is allowed in a five hex radius, so choose the location of your Mines wisely."
+        },
+        {
+            "ID": 60,
+            "value": "Well Cities\n\nWell cities harvest the raw energy required for advanced resources.\n\nThis energy is measured in Energy units.  The maximum amount of Energy units produced by a Well city every turn will depend on:\n\n1) Location\n\n2) Loyalty\n\n3) Population of the city.\n\nWells are one of the few cities that can be built in the ocean.\n\nReminder... Only one harvest city is allowed in a five hex radius, so choose the location of your Wells wisely."
+        },
+        {
+            "ID": 61,
+            "value": "Fusorium Cities\n\nFusorium cities produce Monopols.\n\nMonopols are required for advanced military units, such as hovercraft, and most spacecraft.\n\nThe production of 10 Monopols requires:\n\n1) 10 Energy\n\n2) 7 Electronics\n\nReminder... Fusorium cities will automatically produce Monopols provided you have enough resources."
+        },
+        {
+            "ID": 62,
+            "value": "The Imperial Guard cannot be assigned."
+        },
+        {
+            "ID": 63,
+            "value": "The Imperial Guard is assigned to the Regent and they may also assign themselves a Ministry position."
+        },
+        {
+            "ID": 64,
+            "value": "The Imperial Guard is assigned to the Regent and the other Ministry position must be assigned to other players."
+        },
+        {
+            "ID": 65,
+            "value": "The Patriarch (or Matriarch) lives on Holy Terra and their Sect can decide a great many things:\n\n1) They are responsible for Proscribing / Unproscribing Technology and Patriachs that disdain Technology tend to Proscribe more and Unproscribe less.\n\n2) The Sect of the Patriarch converts other planets to their Sect (although the further away from Holy Terra, the smaller this effect.\n\n3) The Patriarch only lives for a certain duration of time."
+        },
+        {
+            "ID": 66,
+            "value": "House Ruler Score\n\nThis graph allows a House Ruler to compare how their empire fairs versus the others. The score for a House is a measure of their power compared to that of other Houses and is based on the various information included below.\n\nLeft click on the Graph for a more detailed view."
+        },
+        {
+            "ID": 67,
+            "value": "House Sceptor Count\n\nThis tabulates the number of Sceptors that each House controls.\n\nAn astute ruler may use the counts to aid them in the pursuit of various diplomatic options."
+        },
+        {
+            "ID": 68,
+            "value": "House Unit Count\n\nThis tabulates the number of units that a House controls and gives an astute Ruler the opportunity to appraise growing threats and make diplomatic decisions."
+        },
+        {
+            "ID": 69,
+            "value": "House Firebird Treasury Total\n\nThis tabulates the number of Firebirds a House has in their Treasury.\n\nThis allows an astute Ruler to make diplomatic offers commensurate with the financial coffers of other House Rulers."
+        },
+        {
+            "ID": 70,
+            "value": "House City Count\n\nThis tabulates the number of cities that a House Ruler controls.\n\nAn astute ruler will determine a rival House's potential industrial might from this count."
+        },
+        {
+            "ID": 71,
+            "value": "House Technology Research Depth\n\nThis tabulates the amount of research that a House has completed.\n\nAn astute House Ruler can use this information to gauge the technological prowess of their fellow Rulers."
+        },
+        {
+            "ID": 72,
+            "value": "Galaxy-wide Sect Counts\n\nThis tabulates the number of flock each Sect controls throughout the entire galaxy.\n\nNote that in order for flock to be counted, a Cathedral must be present on a planet (Symbiots and Vau do not require a Cathedral to count their flock) and the count is 1 per unit (Cargo Pods and other inanimate units do not count as flock) and 1 per city per 10 health (a 100% healthy city provides 10 flock) of that Sect.\n\nFor values with ?'s a Spy is required to be present on that planet (or homeworld) to gather that information for the player.\n\nWhen the Patriarch dies, the Sect with the highest flock count will become the new Patrirach."
+        },
+        {
+            "ID": 73,
+            "value": "Signed Holy Writ\n\nThis shows which House Rulers have signed a Holy Writ with the Church. Signing a Holy Writ to the Church cedes some of the House's power to that of the Church (a House that has signed a Holy Writ loses 30% of its score - see the House screen for more information)."
+        },
+        {
+            "ID": 74,
+            "value": "The League\n\nThe League is responsible for maintaining trade througout the entire galaxy.\n\nThey are also responsible for restocking the Agoras and setting the prices of the available resources based on supply and demand."
+        },
+        {
+            "ID": 75,
+            "value": "Treaties between the League and other House Rulers\n\nThis shows various treaties that the League has with other House Rulers."
+        },
+        {
+            "ID": 76,
+            "value": "Trade / Embargo\n\nThis shows whether a House is being Embargoed by the League and whether Trade with that House has been suspended.\n\nWhen the League Embargoes another House Ruler, that Ruler can no longer purchase resources from or sell resources to the League."
+        },
+        {
+            "ID": 77,
+            "value": "Loan with the League\n\nThis shows which House Rulers have taken out a loan with the League. An astute House Ruler can use this information to determine whether another House Ruler is under financial duress."
+        },
+        {
+            "ID": 78,
+            "value": "Warchest\n\nThis shows the amount of Firebirds that the League has collected in their Warchest.\n\nThe League's Warchest is their funding for a potential Third Republic and if they are able to accumulate sufficient funds, they will declare war on all the Houses and attempt to create a new age of technological advancement to bring about this dreaded new Third Republic.\n\nOnce this happens, all Houses with lose 30% to their overall score."
+        },
+        {
+            "ID": 79,
+            "value": "Patriarch Death\n\nThe old Patriarch has just died.\n\nA new Patriarch (or Matriarch) is chosen from the Sect that has the most flock.\n\nFlock is counted 10 per city and 1 per unit on planets with Cathedrals."
+        },
+        {
+            "ID": 100,
+            "value": "Units that do not participate in combat (non-combatants)\n\nCertain units do not participate in combat.\n\nUnits like Cargo Pods, Sceptors, and Relics do not participate during combat (although Relics can convey a stack bonus during combat).\n\nThis means that these units cannot affect the outcome of combat between two different stacks.\n\nNotes:\n\n1) Non-combat units can be captured if they are undefended so make sure that you defend these units.\n\n2) If a unit is routed during combat, then it behaves like a Non-Combat unit until the next turn meaning that it can be captured just like a normal Non-Combat unit and it will join your cause."
+        },
+        {
+            "ID": 101,
+            "value": "Duels High-Ranking Units\n\nThis unit is able to duel (fight, assassinate, etc.) other units that have a rank >= %d.\n\nThis means that the unit is able to circumvent defenders in a stack that are below this rank and attack units at or above this rank directly.\n\nFor example, Spies, Nobles, or even Officers all have the capability to duel each other during combat.\n\nOther units like Submarines or Raider Stealth Ships can circumvent Naval or Space defenses to attack other vessels with higher ranks."
+        },
+        {
+            "ID": 102,
+            "value": "Fights on Byzantium II\n\nCertain units are able to fight on Byzantium Secundus before the Regent declares for the Emperorship.\n\nUnits like Spies, Submarines, and Raider Stealth Ships are able to attack on Byzantium II at any time.\n\nAn astute ruler can use these units to inititate strikes upon unsuspecting enemies."
+        },
+        {
+            "ID": 103,
+            "value": "Clergy Units\n\nCertain units are members of religious orders such as Clergy.\n\nThese units are very useful for spreading the values of their Sect and have other abilities.\n\nClergy have the following abilities:\n\n1) Can convert units and cities to their sect.\n\n2) Provide a Tithe collection bonus.\n\n3) Reduce the chance of Religious Rebellions when Tithe is being skimmed from the Church."
+        },
+        {
+            "ID": 104,
+            "value": "Symbiot Nester\n\nSymbiot Nesters are the primary Hive builders of the evil Symbiots.\n\nIf you find a Nester, it is best to destroy them as quickly as possible or the Symbiots may be able to build a Hive and start producing more of their vile kind and overwhelm the residents on the planet."
+        },
+        {
+            "ID": 105,
+            "value": "Vau Worker\n\nVau Workers are the primary builders of Vau Cities.\n\nWhile normally the Vau do not tend to present any sort of threat to the Known Worlds, it would be best to exterminate these workers quickly if you are at war with the Vau and they are spreading into your territory."
+        },
+        {
+            "ID": 106,
+            "value": "Sceptor Unit\n\nThe Sceptor is what gives a House a chance to win the Regency and later the Emperor Election.\n\nEach Sceptor owned by your House conveys one vote and the more you have, the higher chance that you have at winning the election.\n\nSince they do not particiapte in combat, they can be easily captured so be sure to defend them well."
+        },
+        {
+            "ID": 107,
+            "value": "Space Carrier Unit Capability\n\nSpace Carriers and Starbases have the ability to launch their cargo during combat, if that cargo has Space Attacks such as 1) Psy, 2) Ranged Space, 3) Direct Space, or 4) Close Space\n\nWhen deploying their cargo, the deployed units will always ambush units they attack, which can be quite advantageous to tipping the balance of combat in your favor."
+        },
+        {
+            "ID": 108,
+            "value": "Air - Vertical / Short Take-Off and Landing (V/STOL) unit\n\nGunship units are able to operate like normal Air units except that the can land and refuel on special V/STOL Refueling units such as Naval Destroyers.\n\nThis versatility gives them more refueling options than normal Air units."
+        },
+        {
+            "ID": 109,
+            "value": "Refuel and Transport Vertical / Short Take-Off and Landing (V/STOL) units\n\nNaval Destroyers are able to refuel Gunships.\n\nAdditionally, Gunships will not consume any movement while traveling with a Naval Destroyer since it is capable of also transporting V/STOL units."
+        },
+        {
+            "ID": 110,
+            "value": "Air unit with endless fuel supply\n\nVau Fighters and Symbiot Spitters are Air units that have an endless fuel supply.\n\nThis means that these units needn't concern themselves with the logicstics of requiring a nearby refueling source to be able to move, fighter, etc. on the planet."
+        },
+        {
+            "ID": 111,
+            "value": "Air unit that can land safely when running out of fuel\n\nGunships are capable of landing safely when running out of fuel, meaning that they will not die when they run out of fuel.\n\nWhen this unit runs out of fuel, it acts like a non-combat unit and is not able to move or particiapte in combat. This means that it can also be easily captured and is defenseless.\n\nA transport can refuel a Gunship by loading it aboard so make sure that you send one quickly to get your Gunship refueled before it is captured."
+        },
+        {
+            "ID": 112,
+            "value": "Tow - can tow other units\n\nThis unit can tow other units that are capable of being towed.\n\nThis means that only the tower consumes movement when units that can be towed are grouped with a tower unit.\n\nThis allows more efficient movement of certain units.\n\nPTS units can tow other units."
+        },
+        {
+            "ID": 113,
+            "value": "Can be towed (towable) unit\n\nThis unit can be towed by units that are able to tow units.\n\nUnits such as wheeled Anti-Air Guns, Anti-Tank Guns, and Artillery can be towed."
+        },
+        {
+            "ID": 114,
+            "value": "Combat Drug Crash Unit\n\nChem Shock Legions use Combat Drugs to achieve optimal combat performance. Unfortunately, this comes with side effects. After combat, they have a chance to:\n\n1) Lose up to %d Health,\n2)Lose up to %d Loyalty,\n3)A %d Chance to Lose 1 Experience Level.\n\nNote that the unit must target something during combat or none of these side effects will happen."
+        },
+        {
+            "ID": 115,
+            "value": "Medic unit\n\nStarbase units can repair other space units at its location.\n\nThey can provide +%d additional healing benefit to all units in their stack.\n\nThis means that these units can help heal and repair your other ships much more rapidly."
+        },
+        {
+            "ID": 116,
+            "value": "Unit that can never rebel\n\nUnits such as Fanatics, Cargo Pods, and Sceptors can never rebel.\n\nSince Fanatics are able to particiapte in combat, this means that they are able to fight during combat without regard to whether they will flee."
+        },
+        {
+            "ID": 117,
+            "value": "Unit that fights to the death\n\nCertain units suchs as Fanatics fight to the death during combat.\n\nThis means that these units can be used to fight against greater odds, since they may be able to win against enemies with low loyalty that would rather flee than die."
+        },
+        {
+            "ID": 118,
+            "value": "Unit that is Immune to the Plague\n\nCertain units are Immune to being infected by the Plague.\n\nCertain inanimate units like Cargo Pods and Sceptors are immune to the Plague, but also living units such as Symbiots, Vau, or even Genetic Warrior Legions are immune."
+        },
+        {
+            "ID": 119,
+            "value": "Unit that can cause Tactical Plague\n\nCertain units such as Pestulator Artillery can tactically target units during combat, only infecting those units with the Plague instead of the entire stack.\n\nNote that normal Plague rules still apply and a single infected unit can still cause others to become infected."
+        },
+        {
+            "ID": 120,
+            "value": "Unit automatically dies at the end of combat\n\nCertain units, such as Plague Bombs, automatically die at the end of combat.\n\nEssentially, the Plague Bomb explodes, releasing the Plague, but also destroying itself since it is the cause of the explosion."
+        },
+        {
+            "ID": 227,
+            "value": "Units (cont.)\n\nFor success during combat, paying attention to the following unit statistics can lead to victory:\n\n1) Health, 2) Loyalty, 3) Experience, 4) Armor, 5) Agility, 6) Attacks (Accuracy and Strength), and 7) Camouflage\n\nHover over a statistic for more information."
+        },
+        {
+            "ID": 229,
+            "value": "To present your diplomatic exchanges:\n\n1) Click on one of the Give Me bars to make a demand.  (Up to 3 per house, per turn)\n\n2) Click on one of the I'll bars to make an offer.\n\nReminder...If you click on the and button, it will switch to Or, which will change the offers you can make in the I'll bars."
+        },
+        {
+            "ID": 230,
+            "value": "City Construction (cont.)\n\nBefore starting construction on a City, use the mouse cursor to point to a resource and then the harvesting potential of that resource will be shown on the map.\n\nAdditionally you can let your Engineer report back to you about the natural potential of your proposed location.  To do this:\n\n1) Move an Engineer to the prospective site.\n\n2) Access the Build City screen to check the projected production of any given city for that location.\n\nReminder...You cannot build a harvesting city (Arborium, Farm, Mine, or Well), within five hexes of another harvesting city."
+        },
+        {
+            "ID": 233,
+            "value": "Notes:\n\n1) You can move the mouse to the edge of the map to scroll the map.\n\n2) The buttons in the lower left can be used to issue various orders - right-click on them for more information.\n\n3) Movement cost is based on many factors including: a) The type of planet the unit is on (Ice, Jungle, etc.), b) The terrain the unit is moving on / through (Hills, Trees, etc.), and c) The movement type of the unit.\n\n4) If you don't see any movement path being defined then you have units selected that cannot move on that terrain."
+        },
+        {
+            "ID": 235,
+            "value": "These problems will continue to mount until you:\n\n1) Begin producing enough food to feed your population.\n\n2) Buy enough food from the League to feed your population.\n\n3) Disband units and/or raze cities until your food production is great enough to sustain your population.\n\n4) Wait until enough units have starved to death to allow your food consumption to support those who remain."
+        },
+        {
+            "ID": 243,
+            "value": "Raising Taxes\n\nWhen, by your edict, your tax collectors increase your share of the workers hard-earned revenue, two things happen:\n\n1) Your ability to produce units increases in the shortrun as government coffers fill more rapidly.  This allows for the purchase of supplies and materials which are much needed in your race with the other houses for domination of the Empire.\n\n2) On the downside, your city workers begin to grumble under the increased tax burden and their loyalty to you and your cause begins to faulter.  This situation, if prolonged, leads inevitably to rebellion."
+        },
+        {
+            "ID": 244,
+            "value": "Tithe (cont.)\n\nReminder...Skimming from the Church tithe obviously benefits your personal coffers but there is risk involved.\n\nYour more pious adherents might lose faith in your devotion and take up arms against you (max Loyalty is decreased and there is a chance of Religious Rebellions).\n\nThe more money you take and the longer you take it, the greater the chance that the Church will be offended and move against you in some way."
+        },
+        {
+            "ID": 245,
+            "value": "Unit Pay (cont.)\n\nTroops are inspired by more than speeches, fearless leadership and military victories.\n\nIf you wish to see their loyalty and combat performance improve, pay them better.\n\nWhen your finances are such that you feel it necessary to reduce your troops' pay be prepared for the consequences.\n\nThey may become less prepared for combat and furthermore, with their loyalty reduced, your troops may turn on you and rebel at a critical moment."
+        },
+        {
+            "ID": 248,
+            "value": "From this Tech screen you can:\n\n1) Allocate your Labs to Research different Technologies.\n\n2) By selecting the Database button you can Strike Technologies that are no longer useful, freeing up research points for more important projects."
+        },
+        {
+            "ID": 427,
+            "value": "Cities\n\nThe City icon is located on the bottom of the Stack screen.\n\n1) A significant amount of information is displayed here for the city - pay attention to the Loyalty of the City, represented by a percentage number, and the Health / Population represented by a colored bar as both of these affect the amount of resources harvested or produced.\n\nNote that Loyalty also determines if the city can Rebel.\n\n2) Cities are very important at increasing the healing rate of your units after they have suffered health loss due to combat or other factors.\n\n3) The city can also increase the defense of the units protecting it."
+        },
+        {
+            "ID": 435,
+            "value": "Food is measured in Food units.\n\nFully staffed cities require 10 Food units every turn.\n\nThe maximum amount of Food units produced by a Farm city every turn will depend upon the following:\n\n1) Location\n\n2) Loyalty\n\n3) Population of the city.\n\nReminder... Only one harvest city is allowed in a five hex radius, so choose the location of your Farms wisely."
+        },
+        {
+            "ID": 443,
+            "value": "Lowering Taxes\n\nSo what about reducing the tax burden on your people?  This is not a total panacea either.  Doing so results in the following:\n\n1) Your ability to produce declines in the shortrun.  There is not as much funding available to go around for all of your projects.  You may well fall behind your opponents in any number of technical or weapon oriented areas.\n\n2) On the upside, your city workers thrive under their lighter tax load and their loyalty to you increases.  Because of this your risks of rebellion are greatly reduced."
+        },
+        {
+            "ID": 448,
+            "value": "Reminder...\n\nBe careful with technologies that have been proscribed by the Church, or you may end up facing the Holy Inquisition."
+        },
+        {
+            "ID": 627,
+            "value": "Cities (cont.)\n\n1) Additional information is shown based on whether the city is a i) harvesting city, ii) production city, or iii) Cathedral\n\nCities are very important to the success of your House.\n\nAlways ensure that they are properly defended and use the information provided herein to determine if a city is performing optimally per your goals."
+        }
+    ]
+}

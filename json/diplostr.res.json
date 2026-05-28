@@ -1,0 +1,244 @@
+"glDiploStr": {
+    "strings": [
+        {
+            "ID": 200,
+            "value": "GIVE ME"
+        },
+        {
+            "ID": 201,
+            "value": "AND I WILL"
+        },
+        {
+            "ID": 202,
+            "value": "OR I WILL"
+        },
+        {
+            "ID": 1000,
+            "value": "Give me %d Firebird(s)"
+        },
+        {
+            "ID": 1001,
+            "value": "Give you %d Firebird(s)"
+        },
+        {
+            "ID": 1002,
+            "value": "%s technology"
+        },
+        {
+            "ID": 1003,
+            "value": "Give you %s technology"
+        },
+        {
+            "ID": 1004,
+            "value": "All your votes for the next election"
+        },
+        {
+            "ID": 1005,
+            "value": "Give you all my votes at the next election"
+        },
+        {
+            "ID": 1006,
+            "value": "Peace with %s"
+        },
+        {
+            "ID": 1007,
+            "value": "War pact on %s of House %s"
+        },
+        {
+            "ID": 1008,
+            "value": "Declare war on you"
+        },
+        {
+            "ID": 1009,
+            "value": "You cast all of your votes for %s."
+        },
+        {
+            "ID": 1010,
+            "value": "I accept your terms:"
+        },
+        {
+            "ID": 1011,
+            "value": "Vote is preset for %s."
+        },
+        {
+            "ID": 1012,
+            "value": "I reject your terms:"
+        },
+        {
+            "ID": 1013,
+            "value": "A loan for %d"
+        },
+        {
+            "ID": 1014,
+            "value": "Ask Patriarch to Excommunicate You"
+        },
+        {
+            "ID": 1015,
+            "value": "Ask the Patriarch to Excommunicate %s."
+        },
+        {
+            "ID": 1016,
+            "value": "Proscribe %s."
+        },
+        {
+            "ID": 1017,
+            "value": "You cannot offer map information for a planet you have not explored."
+        },
+        {
+            "ID": 1018,
+            "value": "Make me the %s"
+        },
+        {
+            "ID": 1019,
+            "value": "Make you the %s"
+        },
+        {
+            "ID": 1020,
+            "value": "Unleash the plague"
+        },
+        {
+            "ID": 1021,
+            "value": "Make you regret it"
+        },
+        {
+            "ID": 1022,
+            "value": "Appreciate it"
+        },
+        {
+            "ID": 1023,
+            "value": "An alliance with you"
+        },
+        {
+            "ID": 1024,
+            "value": "Sign an alliance with you"
+        },
+        {
+            "ID": 1025,
+            "value": "A peace treaty with you"
+        },
+        {
+            "ID": 1026,
+            "value": "Sign a peace treaty with you"
+        },
+        {
+            "ID": 1027,
+            "value": "Map info from %s"
+        },
+        {
+            "ID": 1028,
+            "value": "Future favor"
+        },
+        {
+            "ID": 1029,
+            "value": "Declaration of war on %s"
+        },
+        {
+            "ID": 1030,
+            "value": "Attack Holy Terra"
+        },
+        {
+            "ID": 1031,
+            "value": "Attack Leagueheim"
+        },
+        {
+            "ID": 1032,
+            "value": "Embargo House %s"
+        },
+        {
+            "ID": 1033,
+            "value": "Remove your sect from %s"
+        },
+        {
+            "ID": 1034,
+            "value": "Give your sect religious control of %s"
+        },
+        {
+            "ID": 1035,
+            "value": "Your cathedral's sect on %s is the same as the Patriarch's."
+        },
+        {
+            "ID": 1036,
+            "value": "Your cathedral's sect on %s is not the same as the Patriarch's."
+        },
+        {
+            "ID": 1037,
+            "value": "Sign Holy Writ"
+        },
+        {
+            "ID": 1038,
+            "value": "Sign Holy Writ?"
+        },
+        {
+            "ID": 1039,
+            "value": "Give you map info from %s"
+        },
+        {
+            "ID": 1040,
+            "value": "Neutralize our alliance"
+        },
+        {
+            "ID": 1041,
+            "value": "You don't have control of the cathedral on %s"
+        },
+        {
+            "ID": 1042,
+            "value": "Unproscribe %s."
+        },
+        {
+            "ID": 2000,
+            "value": "You have bothered us enough.  Begone!"
+        },
+        {
+            "ID": 2001,
+            "value": "The Vau have no use for your technology.  However, we will give Firebirds in exchange for map information.  Are you interested?"
+        },
+        {
+            "ID": 2002,
+            "value": "Click on the planet to give to the Vau."
+        },
+        {
+            "ID": 2003,
+            "value": "We have no use for your map of %s.  Begone!"
+        },
+        {
+            "ID": 2004,
+            "value": "The Vau will give you %d Firebirds for your map of %s.  Acceptable?"
+        },
+        {
+            "ID": 2005,
+            "value": "The Vau will not tolerate the hostile actions by %s of House %s.  Please restrain your species."
+        },
+        {
+            "ID": 2006,
+            "value": "There is no Patriarch to do diplomacy with."
+        },
+        {
+            "ID": 2007,
+            "value": "By agreeing to this we will reject {} incoming offer(s)."
+        },
+        {
+            "ID": 2008,
+            "value": "By agreeing to this we will rescind {} offer(s)."
+        },
+        {
+            "ID": 2009,
+            "value": "By agreeing to this we will reject {} incoming offer(s) and rescind {} outgoing offer(s)."
+        },
+        {
+            "ID": 2010,
+            "value": "We rejected {}'s terms:"
+        },	
+        {	
+            "ID": 2011,
+            "value": "We agreed to {}'s terms:"
+        },
+        {	
+            "ID": 2012,
+            "value": "We rescinded our offer to {}:"
+        },		
+        {	
+            "ID": 10000,
+        	"value": "Advisor"
+        }
+    ]
+}
