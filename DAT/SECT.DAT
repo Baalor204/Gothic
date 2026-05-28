@@ -112,7 +112,7 @@
 "+Healing Rate"      "0    10     0     0     0     0     0     0     0"
 "+Plague"            "0     0     0     0     0     0     0     0     0"
 "+Experience"        "0     0     0     0     0     0     0     0     0"
-"+Routing"           "0     0     0     0     0     0     0     0     0"
+"+Routing"           "0     0     0     0    10     0     0     0     0"
 "+Rebellion"         "0     0     0     0     0     0     0     0     0"
 "+Loyalty"           "0     0     0     0     0     0     0     0     0"
 "+Ruin"              "0     0     0     0     0     0     0     0     0"
@@ -158,9 +158,9 @@
 "Direct"            "0    0     0    0     0    0     0    0     0    0     1    5     0    0     0    0     0    0" 
 "Close"             "0    0     0    0     0    0     0    0     0    0     1    5     0    0     0    0     0    0" 
 "Psy"               "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
-"Ranged Space"      "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
-"Direct Space"      "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
-"Close Space"       "0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0     0    0" 
+"Ranged Space"      "0    0     0    0     1   10     0    0     0    0     0    0     0    0     0    0     0    0" 
+"Direct Space"      "0    0     0    0     1   10     0    0     0    0     0    0     0    0     0    0     0    0" 
+"Close Space"       "0    0     0    0     1   10     0    0     0    0     0    0     0    0     0    0     0    0" 
 }
 //
 // Section I3 - Sect Individual Miscellaneous Bonuses
@@ -177,8 +177,8 @@
 { "I3"                                                                 
 "+Healing Rate"      "0     0     0     0     0     0     0     0     0"
 "+Plague"            "0     0     0     0     0     0     0     0     0"
-"+Experience"        "0     0     0     0     0     0     0     0     0"
-"+Routing"           "0     0     0     0     0     0     0     0     0"
+"+Experience"        "0     0     0     0     0    10     0     0     0"
+"+Routing"           "0     0     0     0    15     0     0     0     0"
 "+Rebellion"         "0     0     0     0     0     0     0     0     0"
 "+Loyalty"           "0     0     0     0     0     0     0     0     0"
 "+Ruin"              "0     0     0     0     0     0     0     0     0"
