@@ -106,7 +106,7 @@
 "name" "Geothermal Cryo-Dynamics"       "stats" " 19   0   0   0   0   0   0   0   0   0    100    20     3     0    -1"   "extra" "Physics requirement for Arctic Worlds."
 "name" "Organic Thermal Entropy"        "stats" " 19   0   0   0   0   0   0   0   0   0    100    20     3     0    -1"   "extra" "Physics requirement for Jungle Worlds."
 "name" "Chromatographic Dynamics"       "stats" " 19   0   0   0   0   0   0   0   0   0    100    13     3     0    -1"   "extra" "Physics requirement for Vau Psychology"
-"name" "Organic Thermal Entropy"        "stats" " 19   0   0   0   0   0   0   0   0   0    100     8     3     0    -1"   "extra" "Physics requirement for Symbiot Psychology"
+"name" "Exoneural Assimilation"         "stats" " 19   0   0   0   0   0   0   0   0   0    100     8     3     0    -1"   "extra" "Physics requirement for Symbiot Psychology"
 "name" "Pleromic Mechanics"             "stats" " 19   0   0   0   0   0   0   0   0   0    100    21     3     0    -1"   "extra" "Physics requirement for Theurgy"
 "name" "Kinetic Absolution"             "stats" " 19   0   0   0   0   0   0   0   0   0    100    20     3     0    -1"   "extra" "Physics requirement for Ceramsteel"
 "name" "Synaptic Shock-Dampening"       "stats" " 19   0   0   0   0   0   0   0   0   0    200    20     3     0    -1"   "extra" "Physics requirement for Biochem"

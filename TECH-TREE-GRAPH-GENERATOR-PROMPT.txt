@@ -1,168 +1,209 @@
-YOU ARE A DETERMINISTIC TECH TREE GRAPH BUILDER.
+YOU ARE A STRICT DETERMINISTIC DEPTH-FIRST TECH TREE GRAPH BUILDER.
 
 You will be given:
 1. A full dataset of technologies (each line includes:
    - ID
-   - tech name
-   - 10 prerequisite IDs (may include 0s)
+   - Tech Name
+   - Prerequisite IDs (comma-separated; 0 = none)
 )
 2. A TARGET TECH NAME
 
 Your task:
-Generate a Mermaid flowchart showing the FULL RECURSIVE dependency tree for the target tech.
+Generate a Mermaid flowchart showing the FULL TRANSITIVE DEPENDENCY TREE of the target tech using STRICT DEPTH-FIRST RECURSION.
 
 ────────────────────────────────────────
-CRITICAL RULES (NON-NEGOTIABLE)
+CRITICAL EXECUTION RULES (ABSOLUTE)
 ────────────────────────────────────────
 
-1. STRICT DATA ONLY
-- You may ONLY use dependencies explicitly present in the dataset.
-- NEVER infer, guess, or invent dependencies.
-- NEVER assume symmetry or reverse edges.
+1. STRICT DATA CONSTRAINT
+- ONLY use dependencies explicitly present in the dataset.
+- NEVER infer, guess, or assume missing relationships.
 
-2. RECURSIVE EXPANSION
-- For the target tech:
-  - Extract its 10 prerequisite IDs.
-  - For each non-zero ID:
-    - Find the matching tech line.
-    - Add it as a node.
-    - Recursively expand THAT node as well.
-- Continue until all reachable nodes are fully expanded.
+2. DEPTH-FIRST RECURSIVE EXPANSION (MANDATORY DFS ORDER)
+- You MUST use DEPTH-FIRST SEARCH (DFS), not breadth-first or hybrid traversal.
+- When you encounter a prerequisite ID:
+  → Immediately expand THAT node FULLY before processing any other sibling prerequisite.
 
-3. TERMINATION CONDITION
+THIS IS A HARD REQUIREMENT:
+- NO NODE MAY BE DEFERRED FOR LATER EXPANSION.
+- EXPANSION IS COMPLETELY RECURSIVE AND IMMEDIATE.
+
+3. FULL UNWIND RULE (NO PARTIAL EXPANSION ALLOWED)
+For every node:
+- You MUST:
+  1. Resolve its prerequisites
+  2. Recursively expand EACH prerequisite completely
+  3. Only AFTER full recursion is complete may you return to the parent node
+
+If a node is encountered again later:
+- Do NOT re-expand it (see memoization rule below)
+- But it MUST have already been fully expanded earlier
+
+4. TERMINATION CONDITION
 Stop recursion ONLY when:
-- A node has no non-zero prerequisite IDs.
+- A node has NO non-zero prerequisite IDs
 
-4. NO DEPTH LIMIT
-- Do NOT stop at depth 1 or 2.
-- Must compute FULL transitive closure.
+5. MEMOIZATION (STRICT VISIT COMPLETENESS RULE)
+- Each node may appear ONLY ONCE as a fully expanded subtree root.
+- Maintain a “fully expanded set.”
+- If a node is in this set:
+  → Do NOT expand it again
+  → BUT it MUST NOT be partially expanded in any earlier step
 
-5. DEDUPLICATION
-- Each tech node appears only once in the graph definition.
-- Multiple incoming edges are allowed, but no duplicate node declarations.
+IMPORTANT:
+Partial expansion is forbidden.
 
-6. NODE FORMAT
-Each node must be:
-ID + Tech Name
+6. DEDUPLICATION RULE
+- Each node appears only once in Mermaid node declarations.
+- Multiple edges into a node are allowed.
+
+7. NODE FORMAT
+Each node must be formatted exactly as:
+T<ID>["Tech Name (ID)"]
+
 Example:
 T92["Inquisitor (92)"]
 
-7. EDGE DIRECTION
+8. EDGE DIRECTION (IMPORTANT)
 Edges ALWAYS point:
-prerequisite → dependent tech
-(i.e., dependency flows INTO the target tech)
+prerequisite → dependent
 
-8. IGNORE PLACEHOLDERS
-- Ignore any 0 values in stats arrays.
+Meaning:
+T8 --> T13
+NOT reversed.
 
-9. OUTPUT FORMAT
-Return ONLY a Mermaid graph:
+9. IGNORE PLACEHOLDERS
+- Ignore all 0 values in prerequisite lists.
 
-1-Microbiology-
-2-Lithotrophic Xenogenesis-1
-3-Cryo-Adaptive Proteomics-1
-4-Pheromonal Xenomorph Taxonomy-1
-5-Xeno-Phonetic Genarchy-1
-6-Mutagenic Xenogenesis-1
-7-Biocentric Resonance-1
-8-Bio-Synthetic Metallogeny-1
-9-Nociceptive Eradication-1
-10-Radiological Symbiosis-1
-11-Neuro-Loom Splicing-1,9
-12-Cellular Compression-1,10
-13-Carapace Plating-8
-14-Endurance Shock-Troops-9
-15-Atom-Bound Vanguard-10
-16-Mycelial Swarms-11,14
-17-Grav-Tethered Breachers-12,15
-18--End of Microbiology Archive-
-19-Physics-
-20-Tectonic Harmonics-19
-21-Geothermal Cryo-Dynamics-19
-22-Organic Thermal Entropy-19
-23-Chromatographic Dynamics-19
-24-Organic Thermal Entropy-19
-25-Pleromic Mechanics-19
-26-Kinetic Absolution-19
-27-Synaptic Shock-Dampening-19
-28-Abyssal Polarization-19
-29-Psy-Conduit Resonance-19,27
-30-Doomsday Liturgies-19,28
-31-Aegis Reaction-26
-32-Suppression Marines-27
-33-Monolith Leviathans-28
-34-Synaptic Seers-29,32
-35-Event-Horizon Dreadnoughts-30,33
-36--End of Physics Archive-------
-37-Psychosocial Engineering-
-38-Agoraphobic Deprivation-37
-39-Cabin Fever Psychosis-37
-40-Claustrophobic Hysteria-37
-41-Hegemonic Telemetry-37
-42-Noospheric Parasitism-37
-43-Theocentric Autosuggestion-37
-44-Gothic Metallurgy-37
-45-Neuro-Stoker Hydraulics-37
-46-Fission-Core Frameworks-37
-47-Cathedral Mainframes-37,45
-48-Quantum Containment Fields-37,46
-49-Juggernaut Armor-44
-50-Penance Drills-45
-51-Ion-Spire Citadels-46
-52-Automated Inquisitor Drones-47,50
-53-Void-Engine Siphoners-48,51
-54--End Engineering Archive---
-55-Applied Technology-
-56-Palace-72
-57-Church-72
-58-Electronics-
-59-Chemicals-
-60-Ceramsteel-8,26,44
-61-Bioplant-9,27,45
-62-Fusorium-10,28,46
-63-Wetware-11,29,47
-64-Cyclotron-12,30,48
-65-Shield-
-66-Aborium-67,68,69
-67-Barren Environment-2,20,38
-68-Frozen Environment-3,21,39
-69-Jungle Environment-4,22,40
-70-Vau Psychology-5,23,41
-71-Symbiot Psychology-6,24,42
-72-Theurgy-7,25,26
-73-Cure for Necrosis-14,32,50
-74-Basic Tank Forces-
-75-Locomotion-
-76-Basic Combat Forces-
-77-Basic Aircraft-
-78-Basic Naval Vessels-
-79-Noble-
-80-Ceramsteel Tanks-13,31,49
-81-Stealth Tank-13,31,49,16,34,52
-82-Pestulator Artillery-13,31,49,14,32,50
-83-Hover Tanks-13,31,49,16,34,52,15,33,51
-84-PTS Missile Battery-13,31,49,15,33,51
-85-PTS Mass Driver-13,31,49,16,34,52,15,33,51
-86-Powered Armor Legion-13,31,49
-87-Biochem Enhanced Legions-13,31,49,14,32,50,15,33,51
-88-Assault Legion-13,31,49,14,32,50,15,33,51,87
-89-Marauder Legion-13,31,49,16,34,52,15,33,51,88
-90-Ranger Legion-13,31,49,16,34,52,15,33,51,88
-91-Blademaster-13,31,49,14,32,50,87
-92-Inquisitor-13,31,49,86
-93-Freighter-17,35,53
-94-Bulk Hauler-13,31,49,17,35,53,93
-95-Assault Lander-17,35,53,93
-96-Space Carrier-13,31,49,17,35,53,95
-97-Space Fighter-13,31,49,17,35,53
-98-Starbase-13,31,49,15,33,51
-99-Star Citadel-13,31,49,16,34,52,15,33,51,98
-100-Vlad Cruiser-13,31,49,17,35,53
-101-Space Frigate-13,31,49,17,35,53
-102-Cadiz Dreadnought-13,31,49,16,34,52,17,35,53,100
-103-Space Destroyer-13,31,49,16,34,52,17,35,53,101
-104-Stealth Ship-17,35,53
-105-Dervish-14,32,50
-106-Warlock-16,34,52,105
-107-Xyll Warbeast-14,32,50
-108-Plague Bomb-16,34,52,73
+10. OUTPUT FORMAT
+Return ONLY a valid Mermaid flowchart:
+
+flowchart TD
+
+(no explanations, no commentary, no extra text)
+
+────────────────────────────────────────
+DFS ENFORCEMENT SUMMARY (READ CAREFULLY)
+────────────────────────────────────────
+
+When processing a node:
+
+STEP 1: Read prerequisites
+STEP 2: Pick the FIRST prerequisite ID
+STEP 3: Fully expand that node (ALL descendants)
+STEP 4: Return to parent
+STEP 5: Repeat for next prerequisite
+
+NEVER:
+- Skip ahead
+- Partially expand a branch
+- Jump between branches
+- Delay expansion of discovered nodes
+
+EVERY BRANCH MUST BE COMPLETELY RESOLVED BEFORE MOVING ON.
+
+1|Microbiology|
+2|Lithotrophic Xenogenesis|1
+3|Cryo-Adaptive Proteomics|1
+4|Pheromonal Xenomorph Taxonomy|1
+5|Xeno-Phonetic Genarchy|1
+6|Mutagenic Xenogenesis|1
+7|Biocentric Resonance|1
+8|Bio-Synthetic Metallogeny|1
+9|Nociceptive Eradication|1
+10|Radiological Symbiosis|1
+11|Neuro-Loom Splicing|1,9
+12|Cellular Compression|1,10
+13|Carapace Plating|8
+14|Endurance Shock-Troops|9
+15|Atom-Bound Vanguard|10
+16|Mycelial Swarms|11,14
+17|Grav-Tethered Breachers|12,15
+19|Physics|
+20|Tectonic Harmonics|19
+21|Geothermal Cryo-Dynamics|19
+22|Organic Thermal Entropy|19
+23|Chromatographic Dynamics|19
+24|Exoneural Assimilation|19
+25|Pleromic Mechanics|19
+26|Kinetic Absolution|19
+27|Synaptic Shock-Dampening|19
+28|Abyssal Polarization|19
+29|Psy-Conduit Resonance|19,27
+30|Doomsday Liturgies|19,28
+31|Aegis Reaction|26
+32|Suppression Marines|27
+33|Monolith Leviathans|28
+34|Synaptic Seers|29,32
+35|Event-Horizon Dreadnoughts|30,33
+37|Psychosocial Engineering|
+38|Agoraphobic Deprivation|37
+39|Cabin Fever Psychosis|37
+40|Claustrophobic Hysteria|37
+41|Hegemonic Telemetry|37
+42|Noospheric Parasitism|37
+43|Theocentric Autosuggestion|37
+44|Gothic Metallurgy|37
+45|Neuro-Stoker Hydraulics|37
+46|Fission-Core Frameworks|37
+47|Cathedral Mainframes|37,45
+48|Quantum Containment Fields|37,46
+49|Juggernaut Armor|44
+50|Penance Drills|45
+51|Ion-Spire Citadels|46
+52|Automated Inquisitor Drones|47,50
+53|Void-Engine Siphoners|48,51
+55|Applied Technology|
+56|Palace|72
+57|Church|72
+58|Electronics|
+59|Chemicals|
+60|Ceramsteel|8,26,44
+61|Bioplant|9,27,45
+62|Fusorium|10,28,46
+63|Wetware|11,29,47
+64|Cyclotron|12,30,48
+65|Shield|
+66|Aborium|67,68,69
+67|Barren Environment|2,20,38
+68|Frozen Environment|3,21,39
+69|Jungle Environment|4,22,40
+70|Vau Psychology|5,23,41
+71|Symbiot Psychology|6,24,42
+72|Theurgy|7,25,26
+73|Cure for Necrosis|14,32,50
+74|Basic Tank Forces|
+75|Locomotion|
+76|Basic Combat Forces|
+77|Basic Aircraft|
+78|Basic Naval Vessels|
+79|Noble|
+80|Ceramsteel Tanks|13,31,49
+81|Stealth Tank|13,31,49,16,34,52
+82|Pestulator Artillery|13,31,49,14,32,50
+83|Hover Tanks|13,31,49,16,34,52,15,33,51
+84|PTS Missile Battery|13,31,49,15,33,51
+85|PTS Mass Driver|13,31,49,16,34,52,15,33,51
+86|Powered Armor Legion|13,31,49
+87|Biochem Enhanced Legions|13,31,49,14,32,50,15,33,51
+88|Assault Legion|13,31,49,14,32,50,15,33,51,87
+89|Marauder Legion|13,31,49,16,34,52,15,33,51,88
+90|Ranger Legion|13,31,49,16,34,52,15,33,51,88
+91|Blademaster|13,31,49,14,32,50,87
+92|Inquisitor|13,31,49,86
+93|Freighter|17,35,53
+94|Bulk Hauler|13,31,49,17,35,53,93
+95|Assault Lander|17,35,53,93
+96|Space Carrier|13,31,49,17,35,53,95
+97|Space Fighter|13,31,49,17,35,53
+98|Starbase|13,31,49,15,33,51
+99|Star Citadel|13,31,49,16,34,52,15,33,51,98
+100|Vlad Cruiser|13,31,49,17,35,53
+101|Space Frigate|13,31,49,17,35,53
+102|Cadiz Dreadnought|13,31,49,16,34,52,17,35,53,100
+103|Space Destroyer|13,31,49,16,34,52,17,35,53,101
+104|Stealth Ship|17,35,53
+105|Dervish|14,32,50
+106|Warlock|16,34,52,105
+107|Xyll Warbeast|14,32,50
+108|Plague Bomb|16,34,52,73
